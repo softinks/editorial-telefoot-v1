@@ -945,11 +945,11 @@ ul.ms_lang_box:after {
 
 nav {
 
-    height: 4.375rem;
+
     position: fixed;
     top: 0;
     transition: top 0.2s ease-in-out;
-    width: 100%;
+
 
 }
 

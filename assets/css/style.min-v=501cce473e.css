@@ -976,9 +976,9 @@ nav {
 
 #mobile-navbar a:last-child {
     color: #000;
-    padding-right: 1rem;
+    padding-right: .4rem;
     padding-top: 15px;
-    width: 1.4rem;
+    width: 1.8rem;
     border-right: 1px solid rgba(0, 0, 0, .05)
 }
 
@@ -1668,6 +1668,10 @@ nav {
     -o-transition: all 0.4s ease-in-out;
 }
 
+.btn-outline-primary {
+    color: #d4a650 background-color: transparent;
+    border-color: #d4a650;
+}
 
 .btn:not(.facebook):not(.twitter):not(.google-plus):hover {
     background-color: #fff !important;

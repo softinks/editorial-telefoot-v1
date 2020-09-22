@@ -976,7 +976,7 @@ nav {
 
 #mobile-navbar a:last-child {
     color: #000;
-    padding-right: .8rem;
+    padding-right: 1rem;
     padding-top: 15px;
     width: 1.4rem;
     border-right: 1px solid rgba(0, 0, 0, .05)

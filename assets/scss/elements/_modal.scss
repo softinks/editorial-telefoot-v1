@@ -1,0 +1,148 @@
+.modal-open .modal {
+    padding: 0 !important;
+    overflow-y: hidden;
+    z-index: 100000
+}
+
+.modal-dialog {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    max-width: 500px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow-y: auto
+}
+
+.large-modal .modal-dialog {
+    max-width: 750px
+}
+
+.modal-body,
+.modal-content {
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+    padding: 0;
+    margin: 0
+}
+
+.modal-body .form-wrapper,
+.modal-body .modal-side-image {
+    padding: 2.5rem;
+    height: 300px
+}
+
+.modal-body .form-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    width: 100%
+}
+
+.modal-body .form-wrapper .user-info {
+    width: 100%
+}
+
+.modal-body .form-wrapper .user-info p {
+    font-family: Montserrat;
+    margin-bottom: 5px
+}
+
+.modal-body .form-wrapper .user-info p strong {
+    color: #000
+}
+
+.modal-body .form-wrapper .user-info p strong:not(.email) {
+    text-transform: capitalize
+}
+
+.large-modal .modal-dialog .form-wrapper {
+    height: auto
+}
+
+.modal-body .form-wrapper h2 {
+    margin-bottom: .625rem
+}
+
+.modal-body .form-wrapper p {
+    margin-bottom: 1.25rem;
+    color: #999
+}
+
+.modal-backdrop {
+    opacity: .85 !important;
+    background-color: #000;
+    z-index: 10000
+}
+
+.input-group>.input-group-append>.btn:hover {
+    background-color: #f1f1f1
+}
+
+#subscribe-modal .error .info-text,
+#subscribe-modal .error-text,
+#subscribe-modal .success .info-text,
+#subscribe-modal .success-text,
+.article-subscribe .error .info-text,
+.article-subscribe .error-text,
+.article-subscribe .success .info-text,
+.article-subscribe .success-text {
+    display: none
+}
+
+#subscribe-modal .fa-spinner,
+.article-subscribe .fa-spinner {
+    position: absolute;
+    opacity: 0;
+    top: 17px;
+    right: 15px;
+    z-index: -1;
+    transition: .35s all linear;
+    font-size: 1rem;
+    animation: spin 3s linear infinite
+}
+
+#subscribe-modal button,
+.article-subscribe button {
+    transition: .35s all ease-in-out
+}
+
+#subscribe-modal .loading .fa-spinner,
+.article-subscribe .loading .fa-spinner {
+    z-index: 1;
+    opacity: 1
+}
+
+#subscribe-modal .loading button,
+.article-subscribe .loading button {
+    z-index: -1;
+    opacity: 0
+}
+
+#subscribe-modal .error .error-text,
+#subscribe-modal .success .success-text,
+.article-subscribe .error .error-text,
+.article-subscribe .success .success-text {
+    display: block;
+    margin: 1.25rem 0 0 0
+}
+
+#subscribe-modal .error .error-text,
+.article-subscribe .error .error-text {
+    color: #da0058
+}
+
+#subscribe-modal .success .success-text,
+.article-subscribe .success .success-text {
+    color: #00b258
+}

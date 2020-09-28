@@ -1,0 +1,260 @@
+.match-day-team-list {
+    height: 670px;
+    overflow: hidden;
+    background-color: rgba(238, 238, 238, 0.3);
+    font-family: bt_font_regular, sans-serif
+}
+
+.match-day-team-list .inner {
+    overflow: hidden;
+    padding: 15px 20px 0 20px
+}
+
+.match-day-team-list .inner .nav-tabs {
+    height: 51px;
+    padding: 0;
+    width: 100%
+}
+
+.match-day-team-list .inner .nav-tabs li {
+    border: 2px solid #333;
+    display: inline-block;
+    width: 50%;
+    background-color: #fff;
+    padding: 8px 0;
+    position: relative;
+    text-align: center;
+    height: 41px;
+    float: left;
+    font-family: bt_font_light, sans-serif
+}
+
+.match-day-team-list .inner .nav-tabs li a {
+    line-height: 21px;
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+    font-family: bt_font_regular, sans-serif
+}
+
+.match-day-team-list .inner .nav-tabs .active {
+    background-color: #333
+}
+
+.match-day-team-list .inner .nav-tabs .active a {
+    color: #fff
+}
+
+.match-day-team-list .inner .nav-tabs .active:after {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #333;
+    content: " ";
+    position: absolute;
+    bottom: -12px;
+    left: 42%
+}
+
+.match-day-team-list .inner .nav-tabs li:hover {
+    cursor: pointer
+}
+
+.match-day-team-list .inner .nav-tabs li a:hover {
+    text-decoration: none
+}
+
+.match-day-team-list .inner .fixture-table {
+    margin-top: 10px;
+    padding: 0;
+    max-height: 576px;
+    overflow: hidden
+}
+
+.match-day-team-list .inner .fixture-table .chevron-image {
+    height: 10px;
+    padding-left: 8px;
+    vertical-align: middle
+}
+
+.match-day-team-list .inner .fixture-table ul {
+    background: white;
+    list-style: none;
+    margin: 0 0 15px;
+    text-align: center;
+    padding: 1px 0 0
+}
+
+.match-day-team-list .inner .fixture-table ul p {
+    color: #333;
+    display: inline-block;
+    font-family: bt_font_regular, sans-serif;
+    font-size: 14px;
+    height: 19px
+}
+
+.match-day-team-list .inner .fixture-table ul li span,
+.match-day-team-list .inner .fixture-table ul p {
+    display: inline-block;
+    margin-right: 5px
+}
+
+.match-day-team-list .inner .fixture-table ul .table-title {
+    margin: 5px 5px 0;
+    font-size: 14px;
+    line-height: 19px;
+    height: 29px;
+    display: block;
+    background-color: rgba(238, 238, 238, 0.3)
+}
+
+.match-day-team-list .inner .fixture-table ul .table-title p {
+    color: #333;
+    padding: 5px 0 5px 10px;
+    font-family: bt_font_bold, sans-serif;
+    float: left
+}
+
+.match-day-team-list .inner .fixture-table ul .table-title a {
+    float: right;
+    padding: 0 10px
+}
+
+.match-day-team-list .inner .fixture-table ul .table-title a span {
+    width: 6px;
+    height: 10px;
+    padding: 5px 15px 10px 0
+}
+
+.match-day-team-list .inner .fixture-table ul li {
+    text-align: center;
+    height: 90px;
+    width: 90%;
+    padding: 15px 18px;
+    border: 0;
+    color: #333;
+    margin-left: 15px
+}
+
+.match-day-team-list .inner .fixture-table ul li img {
+    height: 21px
+}
+
+.match-day-team-list .inner .fixture-table ul li .result-rectangle {
+    width: 66px
+}
+
+.match-day-team-list .inner .fixture-table ul li .home-code-left {
+    width: 25px;
+    vertical-align: middle;
+    padding-top: 3px;
+    text-align: right
+}
+
+.match-day-team-list .inner .fixture-table ul li .home-code-right {
+    width: 25px;
+    vertical-align: middle;
+    padding-top: 3px;
+    text-align: left
+}
+
+.match-day-team-list .inner .fixture-table ul li .result-score {
+    min-width: 31px
+}
+
+.match-day-team-list .inner .fixture-table ul li .result-score,
+.match-day-team-list .inner .fixture-table ul li .result-rectangle {
+    border: 1px solid #000;
+    height: 31px;
+    margin-right: 5px
+}
+
+.match-day-team-list .inner .fixture-table ul li .time,
+.match-day-team-list .inner .fixture-table ul li .score {
+    font-size: 16px;
+    line-height: 21px;
+    margin: 4px 0
+}
+
+.match-day-team-list .inner .fixture-table ul li .score {
+    margin: 4px 5px
+}
+
+.match-day-team-list .inner .fixture-table ul li .result-score+.result-score {
+    margin-left: -5px
+}
+
+.match-day-team-list .inner .fixture-table ul li .live-match {
+    background: #e60050;
+    color: #fff
+}
+
+.match-day-team-list .inner .fixture-table ul li .finished-match {
+    background: #000;
+    color: #fff
+}
+
+.match-day-team-list .inner .fixture-table ul li .away-image,
+.match-day-team-list .inner .fixture-table ul li .home-image {
+    margin-right: 5px;
+    min-width: 21px
+}
+
+.match-day-team-list .inner .fixture-table ul li .result-channel {
+    padding-top: 5px
+}
+
+.match-day-team-list .inner .fixture-table ul li .result-channel p {
+    margin-right: 5px;
+    font-family: bt_font_regular, sans-serif
+}
+
+.match-day-team-list .inner .fixture-table ul li .result-channel img {
+    height: 15px;
+    margin-top: -2px
+}
+
+.match-day-team-list .inner .fixture-table ul li .date-channel {
+    padding-top: 5px
+}
+
+.match-day-team-list .inner .fixture-table ul li .date-channel p {
+    margin-right: 5px
+}
+
+.match-day-team-list .inner .fixture-table ul li .date-channel img {
+    height: 15px
+}
+
+.match-day-team-list .inner .fixture-table ul>*:not(:last-child) {
+    border-bottom: 1px solid #eee
+}
+
+.match-day-team-list .inner .fixture-table .fixture_team ul .table-title p,
+.match-day-team-list .inner .fixture-table .result_content ul .table-title p {
+    float: none
+}
+
+.match-day-team-list .inner .fixture-table .fixture-footer {
+    text-align: center
+}
+
+.match-day-team-list .fade {
+    display: none
+}
+
+.match-day-team-list .fade.active {
+    display: block
+}
+
+.match-day-fixture-tabs .match-day-team-list,
+.article-page .match-day-team-list {
+    height: auto;
+    min-height: 670px
+}
+
+.match-day-fixture-tabs .match-day-team-list .inner .fixture-table,
+.article-page .match-day-team-list .inner .fixture-table {
+    max-height: inherit
+}

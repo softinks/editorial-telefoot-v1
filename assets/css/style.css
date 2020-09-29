@@ -1760,6 +1760,7 @@ body.dark.post-template {
 .dark .breadcrumb-title,
 .dark .breadcrumb-list,
 .dark .breadcrumb-list li.active,
+.dark .single-blog-item .post-info .post-excerpt-article,
 .dark footer .post-presentation p > a {
   color: #E6E6E6; }
 
@@ -1791,7 +1792,7 @@ body.dark.post-template {
   color: #5e5e5e; }
 
 .dark .post-title {
-  background-color: #fff !important; }
+  color: #fff !important; }
 
 .dark .entry-title-divider span,
 .dark .entry-title-divider::after,

@@ -965,6 +965,11 @@ input[type="checkbox"] {
   height: 400px; }
 
 /*=====  SPECIALS CSS  ======*/
+.scrollBlocked--fixed {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0; }
+
 /*=====  End of Default CSS  ======*/
 /*=============================================
 =             01. Fonts                =
@@ -1784,6 +1789,9 @@ body.dark.post-template {
 .dark footer .post-presentation h2,
 .dark footer .post-presetation p {
   color: #5e5e5e; }
+
+.dark .post-title {
+  background-color: #fff !important; }
 
 .dark .entry-title-divider span,
 .dark .entry-title-divider::after,
@@ -9804,6 +9812,30 @@ blockquote {
       font: inherit;
       color: inherit; }
 
+.blog-banner-wrap {
+  max-height: 540px; }
+
+.blog-banner-wrap:before {
+  cursor: move;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 30%, #000 100%); }
+
+.blog-banner-wrap .post-info .post-meta {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px; }
+
+.blog-banner-wrap .post-info,
+.blog-banner-wrap .post-date,
+.blog-banner-wrap .post-author {
+  margin-right: 15px; }
+
 .match-day-team-list {
   height: 670px;
   overflow: hidden;
@@ -10836,8 +10868,8 @@ blockquote {
   background-position: center; }
 
 .banner-space {
-  padding-top: 195px;
-  padding-bottom: 204px; }
+  padding-top: 120px;
+  padding-bottom: 60px; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .banner-space {
       padding-top: 120px;
@@ -11047,7 +11079,8 @@ blockquote {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%); }
-    .single-gallery__item:hover .ht-overlay, .single-gallery__item:hover .overlay-icon {
+    .single-gallery__item:hover .ht-overlay,
+    .single-gallery__item:hover .overlay-icon {
       opacity: .9;
       visibility: visible; }
 

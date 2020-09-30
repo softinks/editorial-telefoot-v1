@@ -763,9 +763,8 @@ input[type="checkbox"] {
   @media only screen and (max-width: 767px) {
     .ad-area-top {
       padding-top: 5px;
-      padding-bottom: 5px;
-      margin-top: 90px;
-      max-height: 90px;
+      padding-bottom: 0px;
+      margin-top: 50px;
       width: 100%; } }
 
 .ad-area-item img {
@@ -4237,7 +4236,7 @@ ul.ms_lang_box:after {
 #main-navbar.nav-visible {
   display: none !important;
   width: 80vw;
-  top: 4.375rem;
+  top: 3.775rem;
   height: calc(100vh - 4.375rem);
   right: 0; }
 
@@ -4288,6 +4287,7 @@ ul.ms_lang_box:after {
 
 #mobile-navbar {
   height: 60px;
+  overflow: hidden;
   padding-left: 4px;
   padding-right: 4px;
   background-color: #ffffff;
@@ -4336,7 +4336,7 @@ ul.ms_lang_box:after {
 
 #mobile-navbar .header-right-box {
   color: #000;
-  margin-right: 8px;
+  margin-right: 10px;
   padding-left: 5px;
   right: 0;
   border-left: 1px solid rgba(0, 0, 0, 0.05); }

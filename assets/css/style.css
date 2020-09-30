@@ -10928,9 +10928,11 @@ blockquote {
     margin-right: 0px;
     width: 100%; } }
 
-@media only screen and (max-width: 575px) {
-  .single-blog-lg-list .post-title {
-    font-size: .7rem; } }
+.single-blog-lg-list .post-title {
+  text-align: left; }
+  @media only screen and (max-width: 575px) {
+    .single-blog-lg-list .post-title {
+      font-size: .7rem; } }
 
 @media only screen and (max-width: 575px) {
   .single-blog-lg-list .post-blog-thumbnail .post-blog-video {

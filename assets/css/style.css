@@ -92,7 +92,7 @@ h4,
 h5,
 h6 {
   font-family: "ITC Avant Garde Std Bk";
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 0;
   margin-bottom: 0;
   line-height: 1.41; }
@@ -110,7 +110,7 @@ h1 {
       font-size: 28px; } }
   @media only screen and (max-width: 575px) {
     h1 {
-      font-size: 20px; } }
+      font-size: 24px; } }
 
 h2 {
   font-size: 40px; }
@@ -2134,8 +2134,8 @@ body.dark.post-template {
   .col-xl-8,
   .col-xl-9,
   .col-xl-auto {
-    padding-right: 5px;
-    padding-left: 5px; } }
+    padding-right: 15px;
+    padding-left: 15px; } }
 
 @media only screen and (max-width: 767px) {
   .container-fluid,
@@ -3880,7 +3880,6 @@ body.post-template {
   width: 4.4rem;
   height: 100vh;
   position: fixed;
-  z-index: 1000;
   border-right: 1px solid rgba(0, 0, 0, 0.05);
   background: #ffffff; }
 
@@ -4108,7 +4107,6 @@ nav .nav-top {
   top: 0;
   transition: top 0.4s ease-in-out;
   width: 100%;
-  z-index: 1;
   float: right;
   backface-visibility: hidden; }
 
@@ -4182,7 +4180,6 @@ nav .nav-top {
   padding-top: 5px;
   float: right;
   right: 0;
-  z-index: 2;
   position: absolute; }
 
 .ms_top_right .ms_top_lang {
@@ -4651,7 +4648,6 @@ nav {
   height: auto;
   left: 17.1875rem;
   border-right: 1px solid rgba(0, 0, 0, 0.05);
-  z-index: 1000000;
   -webkit-animation-delay: .35s;
   animation-delay: .35s; }
 
@@ -9372,7 +9368,8 @@ ol {
   grid-gap: 20px;
   width: 100%;
   margin-left: 0px;
-  margin-right: 0px; }
+  margin-right: 0px;
+  margin-bottom: 50px; }
   @media only screen and (max-width: 575px) {
     .article-list {
       margin-bottom: 5px;
@@ -9382,7 +9379,7 @@ ol {
   grid-column: span 8;
   width: 100%;
   padding: 10px 10px 20px 10px;
-  margin-bottom: 10px; }
+  margin-bottom: 15px; }
   @media only screen and (max-width: 575px) {
     .article-item-full {
       padding: 5px 5px 10px 5px;
@@ -9392,7 +9389,7 @@ ol {
   grid-column: span 3;
   width: 50%;
   padding: 10px 10px 20px 10px;
-  margin-bottom: 10px; }
+  margin-bottom: 15px; }
   @media only screen and (max-width: 575px) {
     .article-item-medium {
       margin-bottom: 5px;
@@ -9407,6 +9404,9 @@ ol {
   margin-bottom: 10px;
   margin-top: 10px;
   color: #d4a54e; }
+  @media only screen and (max-width: 767px) {
+    .post-categories {
+      font-size: 9px; } }
 
 .post-title a {
   text-align: left; }
@@ -9499,7 +9499,7 @@ ol {
     margin: 0px;
     font-size: 12px; }
     .single-blog-item .post-info .post-meta .post-author {
-      padding: 5px 5px 0; }
+      padding: 5px 15px 0 0; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .single-blog-item .post-info .post-meta .post-author {
           font-size: 11px; } }
@@ -9692,6 +9692,9 @@ ol {
         padding-left: 5px;
         padding-right: 5px;
         margin-bottom: 10px; }
+        @media only screen and (max-width: 767px) {
+          .single-valid-post-wrapper .post-info .post-meta .post-categories {
+            font-size: 9px; } }
 
 .single-blog__item {
   position: relative;
@@ -11076,8 +11079,12 @@ blockquote {
   border-left: 1px solid rgba(0, 0, 0, 0.05);
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   padding: 20px 0 20px 30px; }
+  @media only screen and (min-width: 794px) and (max-width: 1024px) {
+    .single-blog-lg-list {
+      display: inline-block; } }
   @media only screen and (max-width: 575px) {
     .single-blog-lg-list {
+      display: flex;
       padding: 10px 0 0px 5px; } }
   .single-blog-lg-list:first-child {
     border-top: none;
@@ -11091,6 +11098,11 @@ blockquote {
     margin-right: 20px;
     margin-top: 0px;
     width: 100%; }
+    @media only screen and (max-width: 575px) {
+      .single-blog-lg-list .post-blog-thumbnail {
+        max-width: 100px;
+        min-height: 90px;
+        margin-right: 20px; } }
     @media only screen and (max-width: 575px) {
       .single-blog-lg-list .post-blog-thumbnail {
         max-width: 100px;
@@ -11288,14 +11300,18 @@ blockquote {
     .banner-space {
       padding-top: 120px;
       padding-bottom: 120px; } }
-  @media only screen and (min-width: 768px) and (max-width: 991px) {
+  @media only screen and (min-width: 794px) and (max-width: 1024px) {
     .banner-space {
       padding-top: 100px;
-      padding-bottom: 100px; } }
+      padding-bottom: 80px; } }
   @media only screen and (max-width: 767px) {
     .banner-space {
-      padding-top: 60px;
-      padding-bottom: 60px; } }
+      padding-top: 120px;
+      padding-bottom: 50px; } }
+  @media only screen and (max-width: 575px) {
+    .banner-space {
+      padding-top: 70px;
+      padding-bottom: 50px; } }
 
 .vision-space {
   padding-top: 85px;
@@ -14591,20 +14607,23 @@ div.code-toolbar > .toolbar a:hover {
 
 .elite_vp_logo {
   position: absolute;
-  z-index: 2147483647; }
+  z-index: 99999999; }
 
 .elite_vp_controls .elite_vp_disabled {
   display: none; }
 
 .elite_vp_videoPlayer video {
   display: block;
-  width: 100%;
-  height: 100%; }
+  width: 100ch;
+  height: 100vh;
+  position: absolute;
+  z-index: 99999999999 !important;
+  visibility: visible; }
 
 .elite_vp_videoPlayerAD video {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   cursor: pointer; }
 
 .elite_vp_videoPlayer embed,

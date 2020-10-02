@@ -113,10 +113,10 @@ h1 {
       font-size: 20px; } }
 
 h2 {
-  font-size: 38px; }
+  font-size: 40px; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     h2 {
-      font-size: 38px; } }
+      font-size: 40px; } }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     h2 {
       font-size: 32px; } }
@@ -140,7 +140,7 @@ h3 {
       font-size: 18px; } }
   @media only screen and (max-width: 575px) {
     h3 {
-      font-size: 13px; } }
+      font-size: 15px; } }
 
 h4 {
   font-size: 32px; }
@@ -1707,7 +1707,7 @@ body.dark {
 .dark code[class*=language-],
 .dark pre[class*=language-] {
   text-shadow: 0 1px #000;
-  color: #fff; }
+  color: #e3e5ea; }
 
 .dark #featured-carousel .carousel-control-next,
 .dark #featured-carousel .carousel-control-prev,
@@ -1736,7 +1736,7 @@ body.dark.post-template {
 
 .dark .btn:not(.facebook):not(.twitter):not(.google-plus):hover,
 .dark .post-presentation .post-tags:not(.secondary-tags) a:hover {
-  background-color: #191a1f !important; }
+  background-color: #24272d !important; }
 
 .dark #featured-carousel .carousel-control-next,
 .dark #featured-carousel .carousel-control-prev,
@@ -1777,10 +1777,13 @@ body.dark.post-template {
 .dark .breadcrumb-list li.active,
 .dark .single-blog-item .post-info .post-excerpt-article,
 .dark footer .post-presentation p > a {
-  color: #c8c6c6; }
+  color: #d6dae2; }
+
+.dark .post-excerpt {
+  color: #e3e5ea; }
 
 .dark .o-widget__tabSelector--selected {
-  color: #d4a650; }
+  color: #d4a54e; }
 
 .dark #main-navbar:hover > .navbar-inner > .vertical-navbar-brand p.text-logo {
   background-image: url("../images/telefoot-logo-dark.svg"); }
@@ -1799,23 +1802,25 @@ body.dark.post-template {
 .dark .share-icons > span,
 .dark article td,
 .dark article th,
+.dark .sidebar-widget-title,
+.dark .post-date,
 .post-presentation p.post-author {
-  color: #999; }
+  color: #d6dae2; }
 
 .dark .border-bottom {
-  border-color: #5e5e5e !important; }
+  border-color: #444950 !important; }
 
 .dark footer .post-presentation h2,
 .dark footer .post-presetation p {
-  color: #5e5e5e; }
+  color: #d6dae2; }
 
 .dark .post-title {
-  color: #fff !important; }
+  color: #d6dae2 !important; }
 
 .dark .entry-title-divider span,
 .dark .entry-title-divider::after,
 .dark .entry-title-divider::before {
-  background-color: #fff; }
+  background-color: #ffffff; }
 
 .dark #horizontal-navbar,
 .dark #horizontal-navbar .circular-selector,
@@ -1845,12 +1850,12 @@ body.dark.post-template {
 .dark header .nav-down,
 .dark .o-widget,
 .dark .ms_top_right {
-  background-color: #161616; }
+  background-color: #191a1f; }
 
 .dark .list-group-item.active,
 .dark .blog-pages-wrapper,
 .dark .panels {
-  background-color: #161616; }
+  background-color: #1e2126; }
 
 .dark .o-widget__container {
   background-color: #191a1f; }
@@ -2057,12 +2062,92 @@ body.dark.post-template {
         padding-left: 15px !important;
         padding-right: 15px !important; } }
 
-@media only screen and (max-width: 767px) {
-  .container-fluid {
-    margin: 0;
-    padding: 0; } }
-
 /*=====  End of container  ======*/
+@media only screen and (max-width: 767px) {
+  .col,
+  .col-1,
+  .col-10,
+  .col-11,
+  .col-12,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-6,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-auto,
+  .col-lg,
+  .col-lg-1,
+  .col-lg-10,
+  .col-lg-11,
+  .col-lg-12,
+  .col-lg-2,
+  .col-lg-3,
+  .col-lg-4,
+  .col-lg-5,
+  .col-lg-6,
+  .col-lg-7,
+  .col-lg-8,
+  .col-lg-9,
+  .col-lg-auto,
+  .col-md,
+  .col-md-1,
+  .col-md-10,
+  .col-md-11,
+  .col-md-12,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4,
+  .col-md-5,
+  .col-md-6,
+  .col-md-7,
+  .col-md-8,
+  .col-md-9,
+  .col-md-auto,
+  .col-sm,
+  .col-sm-1,
+  .col-sm-10,
+  .col-sm-11,
+  .col-sm-12,
+  .col-sm-2,
+  .col-sm-3,
+  .col-sm-4,
+  .col-sm-5,
+  .col-sm-6,
+  .col-sm-7,
+  .col-sm-8,
+  .col-sm-9,
+  .col-sm-auto,
+  .col-xl,
+  .col-xl-1,
+  .col-xl-10,
+  .col-xl-11,
+  .col-xl-12,
+  .col-xl-2,
+  .col-xl-3,
+  .col-xl-4,
+  .col-xl-5,
+  .col-xl-6,
+  .col-xl-7,
+  .col-xl-8,
+  .col-xl-9,
+  .col-xl-auto {
+    padding-right: 5px;
+    padding-left: 5px; } }
+
+@media only screen and (max-width: 767px) {
+  .container-fluid,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    width: 100%;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: auto; } }
+
 /*=============================================
 =              05. Header Css            =
 =============================================*/
@@ -3381,11 +3466,19 @@ body.dark.post-template {
     margin-top: 0px; } }
 
 .sidebar-widget + .sidebar-widget {
-  margin-top: 40px; }
+  margin-top: 10px; }
 
 .sidebar-widget-title {
   margin-bottom: 20px;
-  font-weight: 500; }
+  font-weight: 600;
+  border-bottom: 1px solid #BBBFC9;
+  border-left: 10px solid #d4a54e;
+  padding-left: 20px;
+  padding-bottom: 3px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #000000;
+  letter-spacing: 2px; }
 
 .widget-search {
   position: relative; }
@@ -6615,6 +6708,16 @@ ol {
         border: 6px solid #fff;
         border-radius: 50%;
         transition: all 1s cubic-bezier(0, 0, 0.2, 1) !important; }
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+          .video-link .ht-popup-video .video-button__one .video-play {
+            width: 52px;
+            height: 52px;
+            border: 3px solid #fff; } }
+        @media only screen and (max-width: 767px) {
+          .video-link .ht-popup-video .video-button__one .video-play {
+            width: 40px;
+            height: 40px;
+            border: 3px solid #fff; } }
       .video-link .ht-popup-video .video-button__one .video-play-icon {
         position: absolute;
         top: 50%;
@@ -8554,72 +8657,97 @@ ol {
   .projects-wrap.style-2:hover {
     transform: translateY(-5px); }
 
-.messonry-button button {
-  padding: 0;
-  border: 0 none;
-  position: relative;
-  background: transparent; }
-  .messonry-button button span {
+.messonry-button {
+  border-bottom: 1px solid #BBBFC9;
+  margin-bottom: 40px;
+  height: 39px;
+  margin-left: 0;
+  margin-right: 0; }
+  @media only screen and (max-width: 767px) {
+    .messonry-button {
+      height: 34px;
+      margin-bottom: 10px; } }
+  .messonry-button button {
+    padding: 0;
+    border: 0 none;
     position: relative;
-    display: inline-block;
-    padding: 0 5px;
-    margin: 5px 17px;
-    position: relative;
-    border-bottom: 2px solid transparent; }
-    .messonry-button button span.filter-text {
-      font-size: 18px;
-      font-weight: 500;
-      line-height: 1.74;
-      color: #d4a54e;
-      -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
-    .messonry-button button span.filter-counter {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      visibility: hidden;
-      margin: 0 auto;
-      min-width: 34px;
-      height: 24px;
-      line-height: 24px;
-      border-radius: 3px;
-      font-size: 12px;
-      background-color: #d4a54e;
-      color: #fff;
-      text-align: center;
-      opacity: 0;
-      -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-      font-weight: 600; }
-      .messonry-button button span.filter-counter::before {
+    background: transparent;
+    min-width: 49%;
+    text-align: center; }
+    .messonry-button button span {
+      position: relative;
+      display: inline-block;
+      padding: 0 5px;
+      margin: 5px 0px;
+      position: relative; }
+      @media only screen and (max-width: 767px) {
+        .messonry-button button span {
+          border-bottom: 5px solid transparent; } }
+      .messonry-button button span.filter-text {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.74;
+        width: 100%;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #d4a54e;
+        -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1); }
+        @media only screen and (max-width: 767px) {
+          .messonry-button button span.filter-text {
+            font-size: 14px; } }
+      .messonry-button button span.filter-counter {
         position: absolute;
-        right: 0;
-        bottom: -6px;
-        left: 0;
-        display: block;
+        top: 0;
+        left: 50%;
+        visibility: hidden;
         margin: 0 auto;
-        width: 0;
-        height: 0;
-        border-top: 4px solid #d4a54e;
-        border-right: 4px solid transparent;
-        border-left: 4px solid transparent;
-        content: "";
-        border-top-color: #d4a54e; }
-  .messonry-button button:hover span.filter-counter {
-    visibility: visible;
-    opacity: 1;
-    -webkit-transform: translate(-50%, -100%);
-    -ms-transform: translate(-50%, -100%);
-    transform: translate(-50%, -100%); }
-  .messonry-button button:hover span.filter-text {
-    color: #d4a54e; }
-  .messonry-button button.is-checked span {
-    border-bottom: 2px solid #d4a54e; }
-    .messonry-button button.is-checked span.filter-text {
+        min-width: 34px;
+        height: 24px;
+        line-height: 24px;
+        border-radius: 3px;
+        font-size: 12px;
+        background-color: #d4a54e;
+        color: #fff;
+        text-align: center;
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        font-weight: 600; }
+        .messonry-button button span.filter-counter::before {
+          position: absolute;
+          right: 0;
+          bottom: -6px;
+          left: 0;
+          display: block;
+          margin: 0 auto;
+          width: 0;
+          height: 0;
+          border-top: 4px solid #d4a54e;
+          border-right: 4px solid transparent;
+          border-left: 4px solid transparent;
+          content: "";
+          border-top-color: #d4a54e; }
+    .messonry-button button:hover span.filter-counter {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transform: translate(-50%, -100%);
+      -ms-transform: translate(-50%, -100%);
+      transform: translate(-50%, -100%); }
+    .messonry-button button:hover span.filter-text {
       color: #d4a54e; }
+    .messonry-button button.is-checked span {
+      border-bottom: 6px solid #d4a54e; }
+      @media only screen and (max-width: 767px) {
+        .messonry-button button.is-checked span {
+          border-bottom: 4px solid #d4a54e; } }
+      .messonry-button button.is-checked span.filter-text {
+        color: #d4a54e;
+        letter-spacing: 3px; }
 
 /*======================================
 =         33. Contact Us Css            =
@@ -9201,6 +9329,24 @@ ol {
 /*=====================================
 =        34. Blog Pages Css           =
 ======================================*/
+.article-item-1 {
+  float: left;
+  display: inline-block;
+  width: 40%; }
+  .article-item-1 .post-title {
+    text-align: left; }
+  @media only screen and (max-width: 575px) {
+    .article-item-1 {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 10px; }
+      .article-item-1 .post-read-more-share,
+      .article-item-1 .post-view,
+      .article-item-1 .post-author {
+        display: none; }
+      .article-item-1 .post-date {
+        font-size: 10px; } }
+
 .article-item-2 {
   float: left;
   clear: none; }
@@ -9217,6 +9363,40 @@ ol {
         display: none; }
       .article-item-2 .post-date {
         font-size: 10px; } }
+
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  grid-gap: 20px;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px; }
+  @media only screen and (max-width: 575px) {
+    .article-list {
+      margin-bottom: 5px;
+      margin: 10px 0px 20px 0px; } }
+
+.article-item-full {
+  grid-column: span 8;
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  margin-bottom: 10px; }
+  @media only screen and (max-width: 575px) {
+    .article-item-full {
+      padding: 5px 5px 10px 5px;
+      margin-bottom: 5px; } }
+
+.article-item-medium {
+  grid-column: span 3;
+  width: 50%;
+  padding: 10px 10px 20px 10px;
+  margin-bottom: 10px; }
+  @media only screen and (max-width: 575px) {
+    .article-item-medium {
+      margin-bottom: 5px;
+      padding: 5px 5px 10px 5px; } }
 
 .post-categories {
   font-weight: 500;
@@ -9329,10 +9509,11 @@ ol {
         margin-right: 6px;
         border-radius: 50%; }
     .single-blog-item .post-info .post-meta .post-date {
-      padding: 5px 10px; }
+      padding: 5px 0px; }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .single-blog-item .post-info .post-meta .post-date {
-          font-size: 11px; } }
+          font-size: 11px;
+          padding: 5px 0px; } }
       .single-blog-item .post-info .post-meta .post-date .meta-icon {
         margin-right: 6px; }
     .single-blog-item .post-info .post-meta .post-view {
@@ -10063,6 +10244,9 @@ blockquote {
 .blog-pages-wrapper {
   width: 100%;
   background-color: #ffffff; }
+
+.post-title {
+  color: #000000; }
 
 .match-day-team-list {
   height: 670px;
@@ -10906,7 +11090,7 @@ blockquote {
     flex-shrink: 0;
     margin-right: 20px;
     margin-top: 0px;
-    width: 225px; }
+    width: 100%; }
     @media only screen and (max-width: 575px) {
       .single-blog-lg-list .post-blog-thumbnail {
         max-width: 100px;
@@ -10930,9 +11114,6 @@ blockquote {
 
 .single-blog-lg-list .post-title {
   text-align: left; }
-  @media only screen and (max-width: 575px) {
-    .single-blog-lg-list .post-title {
-      font-size: .7rem; } }
 
 @media only screen and (max-width: 575px) {
   .single-blog-lg-list .post-blog-thumbnail .post-blog-video {
@@ -10963,6 +11144,9 @@ blockquote {
     left: 66.66666%; }
   .grid-wrapper .line-4 {
     right: 25px; }
+
+.post-feature blog-thumbnail img-fluid {
+  width: 100%; }
 
 /*=============================================
 =        38. Resolutions home Css             =
@@ -17961,5 +18145,5 @@ yx-axis
 .single-blog-lg-list .post-blog-thumbnail {
   position: relative;
   flex-shrink: 0;
-  margin-right: 29px;
+  margin-right: 10px;
   width: 120px; }

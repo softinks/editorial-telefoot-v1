@@ -89,7 +89,7 @@
             videoPlayerHeight: 740, //fixed total player height (only for playerLayout: "fixedSize")
             videoRatio: 16 / 9, //set your video ratio (calculate video width/video height)
             videoRatioStretch: true, //adjust video ratio for case when playlist is "opened" : true/false
-            iOSPlaysinline: true, //on iOS device: play videos inline (like on desktop) or in Fullscreen by default: true/false
+            iOSPlaysinline: false, //on iOS device: play videos inline (like on desktop) or in Fullscreen by default: true/false
             floatPlayerOutsideViewport: false, //show Sticky player if video player is not in viewport when scrolling through page
             lightBox: false, //lightbox mode :true/false
             lightBoxAutoplay: false, //autoplay video when lightbox opens: true/false
@@ -199,13 +199,13 @@
                 prerollAD: "yes", //show pre-roll "yes","no"
                 prerollGotoLink: "https://telefootlachaine.fr/netflix", //pre-roll goto link
                 preroll_mp4: "assets/videos/adversating_video.mp4", //pre-roll video mp4 format
-                prerollSkipTimer: 5,
+                prerollSkipTimer: 3,
                 midrollAD: "no", //show mid-roll "yes","no"
                 midrollAD_displayTime: "0:20", //show mid-roll at any custom time in format "minutes:seconds" ("00:00")
                 midrollGotoLink: "", //mid-roll goto link
                 midroll_mp4: "assets/videos/adversating_video.mp4", //mid-roll video mp4 format
                 midrollSkipTimer: 5,
-                postrollAD: "yes", //show post-roll "yes","no"
+                postrollAD: "no", //show post-roll "yes","no"
                 postrollGotoLink: " go to the ads", //post-roll goto link
                 postroll_mp4: " ", //post-roll video mp4 format
                 postrollSkipTimer: 5,
@@ -471,7 +471,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <!-- Post Feature Start -->
-                    <div class="col-lg-10 ml-auto mr-auto">
+                    <div class="col-lg-12 ml-auto mr-auto">
                         <div id="Elite_video_player" class="video-article"></div>
                     </div>
                     <!-- Post Feature End -->

@@ -41,27 +41,25 @@ THREEx.FullScreen.activated = function() {
     }
 }
 
-THREEx.FullScreen.activated = function() {
-    document.getElementById("main-navbar").style.width = '0px';
-}
 
-THREEx.FullScreen.cancel = function() {
-        document.getElementById("main-navbar").style.width = '100';
-    }
-    /**
-     * Request fullscreen on a given element
-     * @param {DomElement} element to make fullscreen. optional. default to document.body
-     */
+/**
+ * Request fullscreen on a given element
+ * @param {DomElement} element to make fullscreen. optional. default to document.body
+ */
 THREEx.FullScreen.request = function(element) {
     element = element || document.body;
     if (this._hasWebkitFullScreen) {
         element.webkitRequestFullScreen();
+
     } else if (this._hasMozFullScreen) {
         element.mozRequestFullScreen();
+
     } else if (this._hasMsFullScreen) {
         element.msRequestFullscreen();
+
     } else {
         console.assert(false);
+
     }
 }
 
@@ -69,33 +67,22 @@ THREEx.FullScreen.request = function(element) {
  * Cancel fullscreen
  */
 THREEx.FullScreen.cancel = function() {
+
     if (this._hasWebkitFullScreen) {
         document.webkitCancelFullScreen();
+
     } else if (this._hasMozFullScreen) {
         document.mozCancelFullScreen();
+
     } else if (this._hasMsFullScreen) {
         document.msExitFullscreen();
+
     } else {
         console.assert(false);
+
     }
 }
 
-THREEx.FullScreen.cancel = function() {
-    if (this._hasWebkitFullScreen) {
-        document.webkitCancelFullScreen();
-    } else if (this._hasMozFullScreen) {
-        document.mozCancelFullScreen();
-    } else if (this._hasMsFullScreen) {
-        document.msExitFullscreen();
-    } else {
-        console.assert(false);
-    }
-}
-
-
-THREEx.FullScreen.cancel = function() {
-    document.getElementById("main-navbar").style.width = '100';
-}
 
 
 

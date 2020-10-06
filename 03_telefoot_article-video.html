@@ -59,7 +59,7 @@
 <link rel="stylesheet" href="assets/css/plugins/lightgallery.min.css">
 
 
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 
 <!-- Main Style CSS -->
@@ -83,13 +83,13 @@
             instanceName: "player1", //name of the player instance
             instanceTheme: "dark", //choose video player theme: "dark", "light"
             autohideControls: 5, //autohide HTML5 player controls
-            hideControlsOnMouseOut: "No", //hide HTML5 player controls on mouse out of the player: "Yes","No"
+            hideControlsOnMouseOut: "Yes", //hide HTML5 player controls on mouse out of the player: "Yes","No"
             playerLayout: "fitToContainer", //Select player layout: "fitToContainer" (responsive mode), "fixedSize" (fixed mode), "fitToBrowser" (fill the browser mode)
             videoPlayerWidth: 1280, //fixed total player width (only for playerLayout: "fixedSize")
             videoPlayerHeight: 740, //fixed total player height (only for playerLayout: "fixedSize")
             videoRatio: 16 / 9, //set your video ratio (calculate video width/video height)
             videoRatioStretch: true, //adjust video ratio for case when playlist is "opened" : true/false
-            iOSPlaysinline: false, //on iOS device: play videos inline (like on desktop) or in Fullscreen by default: true/false
+            iOSPlaysinline: true, //on iOS device: play videos inline (like on desktop) or in Fullscreen by default: true/false
             floatPlayerOutsideViewport: false, //show Sticky player if video player is not in viewport when scrolling through page
             lightBox: false, //lightbox mode :true/false
             lightBoxAutoplay: false, //autoplay video when lightbox opens: true/false
@@ -113,11 +113,11 @@
             shuffle: "No", //choose to shuffle videos when playing one after another: "Yes", "No" (shuffle button enabled/disabled on start)
             posterImg: "assets/images/video/preview_images/poster.jpg", //player poster image  
             posterImgOnVideoFinish: "assets/images/video/preview_images/poster2.jpg", //player poster image on video finish (if enabled onFinish:"Stop video")
-            onFinish: "Stop video", //"Play next video","Restart video", "Stop video",
+            onFinish: "Restart video", //"Play next video","Restart video", "Stop video",
             nowPlayingText: "Yes", //enable disable now playing title: "Yes","No"
             fullscreen: "Fullscreen native",
             preloadSelfHosted: "auto", //choose preload buffer for self hosted mp4 videos (video type HTML5): "none", "auto"
-            rightClickMenu: true, //enable/disable right click over HTML5 player: true/false
+            rightClickMenu:false, //enable/disable right click over HTML5 player: true/false
             hideVideoSource: true, //option to hide self hosted video sources (to prevent users from download/steal your videos): true/false
             showAllControls: true, //enable/disable all HTML5 player controls: true/false
             allowSkipAd: true, //enable/disable "Skip advertisement" option: true/false
@@ -126,7 +126,7 @@
             facebookShow: "Yes", //enable/disable facebook option individually: "Yes","No"
             twitterShow: "Yes", //enable/disable twitter option individually: "Yes","No"
             mailShow: "Yes", //enable/disable mail option individually: "Yes","No"
-            facebookShareName: "Telefoot facebbok", //first parametar of facebook share in facebook feed dialog is title
+            facebookShareName: "Telefoot facebook", //first parametar of facebook share in facebook feed dialog is title
             facebookShareLink: "http://", //second parametar of facebook share in facebook feed dialog is link below title
             facebookShareDescription: "Telefoot", //third parametar of facebook share in facebook feed dialog is description below link
             facebookSharePicture: "assets/images/video/thumbnail_images/pic1.jpg", //fourth parametar in facebook feed dialog is picture on left side
@@ -221,13 +221,22 @@
         });
     });
 </script>
-</head>
+
 <body class="home-template orange light">
 
 
+    <div class="preloader-activate preloader-active open_tm_preloader">
+        <div class="preloader-area-wrap">
+            <div class="spinner d-flex justify-content-center align-items-center h-100">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
 
 
-
+ 
 
 <!-- MOBILE NAVBAR -->
 <nav id="mobile-navbar" class="nav-down">
@@ -466,13 +475,13 @@
 
 
     <!--====================  Blog Area Start ====================-->
-    <div class="blog-pages-wrapper section-space--ptb_120">
-        <div class="container">
+    <div class="blog-pages-wrapper">
+        <div class="container mb-40" >
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-12 mt-40"">
                     <!-- Post Feature Start -->
-                    <div class="col-lg-12 ml-auto mr-auto">
-                        <div id="Elite_video_player" class="video-article"></div>
+                    <div class="col-lg-12 ml-auto mr-auto video-article__container">
+                        <div id="Elite_video_player"></div>
                     </div>
                     <!-- Post Feature End -->
                 </div>
@@ -490,7 +499,7 @@
                                 <h1 class="post-title text-center text-black">
                                     Loïc Badiashile : “Être appelé en sélection ? J’en serai très honoré, mais…”
                                 </h1>
-
+                                <h5 class="post-intro">LIGUE 1 - Après le penalty concédé dimanche soir, par l'OM, en première mi-temps à Lyon (1-1), André Villas-Boas a pointé d'un doigt l'arbitrage de Stéphanie Frappart. Des mots durs qui lui ont valu un avertissement.</h5>
                                 <div class="post-meta mt-20 justify-content-center">
                                     <div class="post-author">
                                         <a href="#">
@@ -594,7 +603,7 @@
 
                                                     <p> Supporters congolais, naza mwana mboka !</p>
 
-                                                    <div class="entry-post-share-wrap  border-bottom">
+                                                    <div class="entry-post-share-wrap  border-bottom-dark ">
                                                         <div class="row align-items-center">
                                                             <div class="col-lg-6 col-md-6">
                                                                 <div class="entry-post-tags">
@@ -707,7 +716,7 @@
                                                             <div class="col-lg-12">
 
                                                                 <ol class="comment-list">
-                                                                    <li class="comment border-bottom">
+                                                                    <li class="comment border-bottom-dark ">
                                                                         <div class="comment-2">
                                                                             <div class="comment-author vcard">
                                                                                 <img alt="" src="assets/images/team/coment.jpeg">
@@ -728,7 +737,7 @@
                                                                         </div>
                                                                     </li>
                                                                     <!-- comment End-->
-                                                                    <li class="comment border-bottom">
+                                                                    <li class="comment border-bottom-dark ">
                                                                         <div class="comment-2">
                                                                             <div class="comment-author vcard">
                                                                                 <img alt="" src="assets/images/team/comment-2.jpeg">
@@ -852,1063 +861,1077 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!--====================  Blog Area End  ====================-->
 
-    <!--====================  Video Area Start ====================-->
+        <!--====================  Blog Area End  ====================-->
 
-    <div class="section-space--ptb_100 bg-gray-dark-1 bg-white-text">
-        <div class="container section-space--ptb_60">
-            <div class="row">
-                <div class=" col-lg-7 ">
-                    <div class="section-title-wrap text-left ">
-                        <h3 class="section-title mb-15 wow move-up animated " style="visibility: visible; ">Watch the <span class="text-color-primary ">latest videos</span> from Ligue 1 Uber Eats, Ligue 2 BKT, Champions League and much more
-                        </h3>
-                        <div class="contact-button section-space--mt_30 wow move-up animated " style="visibility: visible; ">
-                            <a href="# " class="hover-style-link ">Watch all videos<i class="far fa-long-arrow-right "></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5 wow move-up animate " style="visibility: visible; animation-name: moveVertical; ">
-                    <div class="about-button mt-30 ">
-                        <a href="# " class="ht-btn ht-btn-md ">Se Connecter</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-sliders-wrapper">
-            <div class="container">
+        <!--====================  Video Area Start ====================-->
+
+        <div class="video-section-resume section-space--ptb_100 bg-gray-dark-1 bg-white-text">
+            <div class="container section-space--ptb_60">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="swiper-container carousel-slider__container swiper-container-initialized swiper-container-horizontal mb-80">
-                            <div class="swiper-wrapper" style="transform: translate3d(-1440px, 0px, 0px); transition-duration: 0ms;">
-                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 450px; margin-right: 30px;">
-                                    <!-- Carousel Slider Start -->
-                                    <div class="carousel-slider wow move-up animated" style="visibility: visible;">
-
-
-                                    </div>
-                                    <!-- Carousel Slider End -->
-                                </div>
-                                <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 450px; margin-right: 30px;">
-                                    <!-- Carousel Slider Start -->
-                                    <div class="carousel-slider wow move-up animated" style="visibility: visible;">
-                                        
-                                        
-                                        <!-- 01 INICIO PRESENTACION ARTICULO -->
-                                        <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
-                                            <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
-                                                <!-- Post Feature Start -->
-                                                <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
-                                                    <a href="#" class="video-link">
-                                                        <div class="single-popup-wrap">
-                                                            <img class="img-fluid" src="assets/images/blog/blog-02-1170x600.jpg" alt="">
-                                                            <div class="ht-popup-video video-overlay">
-                                                                <div class="video-button__one">
-                                                                    <div class="video-play">
-                                                                        <span class="video-play-icon"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                
-                                                </div>
-                                        
-                                                <!-- Post Feature End -->
-                                        
-                                                <!-- Post info Start -->
-                                                <div class="post-info lg-blog-post-info ">
-                                                    <div class="post-categories ">
-                                                        <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
-                                                    </div>
-                                        
-                                                    <h3 class="post-title ">
-                                                        <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
-                                                    </h3>
-                                        
-                                                    <div class="post-meta mt-20 ">
-                                                        <div class="post-author ">
-                                                            <a href="# ">
-                                                                                             Harry Ferguson
-                                                                                        </a>
-                                                        </div>
-                                                        <div class="post-date ">
-                                                            <span class="far fa-calendar meta-icon "></span> January 18, 2019
-                                                        </div>
-                                                        <div class="post-view ">
-                                                            <span class="meta-icon far fa-eye "></span> 346 views
-                                                        </div>
-                                                    </div>
-                                        
-                                                    <div class="post-excerpt mt-15 ">
-                                                        <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
-                                                    </div>
-                                        
-                                                    <div class="read-post-share-wrap mt-20 ">
-                                                        <div class="row align-items-left ">
-                                                            <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
-                                                                <div class="post-read-more ">
-                                                                    <div class="btn-text mt-15 ">
-                                                                        <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
-                                                                    </div>
-                                                                </div>
-                                        
-                                                                <div id="entry-post-share " class="entry-post-share ">
-                                                                    <div class="share-label ">
-                                                                        Share this
-                                                                    </div>
-                                                                    <div class="share-media ">
-                                                                        <span class="share-icon far fa-share-alt "></span>
-                                        
-                                                                        <div class="share-list ">
-                                                                            <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
-                                                                                <i class="fab fa-twitter "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
-                                                                                <i class="fab fa-facebook-f "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
-                                                                                <i class="fab fa-linkedin "></i>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Post info End -->
-                                            </div>
-                                            <!--===== Single Blog Item End =========-->
-                                        
-                                        </article>
-                                        <!-- 01 CIERRE PRESENTACION ARTICULO -->
-                                    </div>
-                                    <!-- Carousel Slider End -->
-                                </div>
-                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="3" style="width: 450px; margin-right: 30px;">
-                                    <!-- Carousel Slider Start -->
-                                    <div class="carousel-slider wow move-up animated" style="visibility: visible;">
-                                        <div class="carousel-slider__image">
-                                            <img class="img-fluid" src="assets/images/blog/blog-02-500x338.jpg" alt="gallery 06">
-                                        </div>
-                                        <div class="carousel-slider__content">
-                                            <h6 class="headeing">04. Execute &amp; install</h6>
-                                            <div class="text">
-                                                It's easy to switch between different devices while keeping your data safe with secure login.
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Carousel Slider End -->
-                                </div>
-                                <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 450px; margin-right: 30px;">
-                                    <!-- Carousel Slider Start -->
-                                    <div class="carousel-slider wow move-up animated" style="visibility: visible;">
-                                        
-                                        
-                                        <!-- 01 INICIO PRESENTACION ARTICULO -->
-                                        <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
-                                            <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
-                                                <!-- Post Feature Start -->
-                                                <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
-                                                    <a href="#" class="video-link">
-                                                        <div class="single-popup-wrap">
-                                                            <img class="img-fluid" src="assets/images/blog/blog-02-1170x600.jpg" alt="">
-                                                            <div class="ht-popup-video video-overlay">
-                                                                <div class="video-button__one">
-                                                                    <div class="video-play">
-                                                                        <span class="video-play-icon"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                
-                                                </div>
-                                        
-                                                <!-- Post Feature End -->
-                                        
-                                                <!-- Post info Start -->
-                                                <div class="post-info lg-blog-post-info ">
-                                                    <div class="post-categories ">
-                                                        <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
-                                                    </div>
-                                        
-                                                    <h3 class="post-title ">
-                                                        <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
-                                                    </h3>
-                                        
-                                                    <div class="post-meta mt-20 ">
-                                                        <div class="post-author ">
-                                                            <a href="# ">
-                                                                                             Harry Ferguson
-                                                                                        </a>
-                                                        </div>
-                                                        <div class="post-date ">
-                                                            <span class="far fa-calendar meta-icon "></span> January 18, 2019
-                                                        </div>
-                                                        <div class="post-view ">
-                                                            <span class="meta-icon far fa-eye "></span> 346 views
-                                                        </div>
-                                                    </div>
-                                        
-                                                    <div class="post-excerpt mt-15 ">
-                                                        <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
-                                                    </div>
-                                        
-                                                    <div class="read-post-share-wrap mt-20 ">
-                                                        <div class="row align-items-left ">
-                                                            <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
-                                                                <div class="post-read-more ">
-                                                                    <div class="btn-text mt-15 ">
-                                                                        <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
-                                                                    </div>
-                                                                </div>
-                                        
-                                                                <div id="entry-post-share " class="entry-post-share ">
-                                                                    <div class="share-label ">
-                                                                        Share this
-                                                                    </div>
-                                                                    <div class="share-media ">
-                                                                        <span class="share-icon far fa-share-alt "></span>
-                                        
-                                                                        <div class="share-list ">
-                                                                            <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
-                                                                                <i class="fab fa-twitter "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
-                                                                                <i class="fab fa-facebook-f "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
-                                                                                <i class="fab fa-linkedin "></i>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Post info End -->
-                                            </div>
-                                            <!--===== Single Blog Item End =========-->
-                                        
-                                        </article>
-                                        <!-- 01 CIERRE PRESENTACION ARTICULO -->
-                                    </div>
-                                    <!-- Carousel Slider End -->
-                                </div>
-                                <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 450px; margin-right: 30px;">
-                                    <!-- Carousel Slider Start -->
-                                    <div class="carousel-slider wow move-up animated" style="visibility: visible;">
-                                        
-                                        
-                                        <!-- 01 INICIO PRESENTACION ARTICULO -->
-                                        <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
-                                            <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
-                                                <!-- Post Feature Start -->
-                                                <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
-                                                    <a href="#" class="video-link">
-                                                        <div class="single-popup-wrap">
-                                                            <img class="img-fluid" src="assets/images/blog/blog-02-1170x600.jpg" alt="">
-                                                            <div class="ht-popup-video video-overlay">
-                                                                <div class="video-button__one">
-                                                                    <div class="video-play">
-                                                                        <span class="video-play-icon"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                
-                                                </div>
-                                        
-                                                <!-- Post Feature End -->
-                                        
-                                                <!-- Post info Start -->
-                                                <div class="post-info lg-blog-post-info ">
-                                                    <div class="post-categories ">
-                                                        <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
-                                                    </div>
-                                        
-                                                    <h3 class="post-title ">
-                                                        <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
-                                                    </h3>
-                                        
-                                                    <div class="post-meta mt-20 ">
-                                                        <div class="post-author ">
-                                                            <a href="# ">
-                                                                                             Harry Ferguson
-                                                                                        </a>
-                                                        </div>
-                                                        <div class="post-date ">
-                                                            <span class="far fa-calendar meta-icon "></span> January 18, 2019
-                                                        </div>
-                                                        <div class="post-view ">
-                                                            <span class="meta-icon far fa-eye "></span> 346 views
-                                                        </div>
-                                                    </div>
-                                        
-                                                    <div class="post-excerpt mt-15 ">
-                                                        <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
-                                                    </div>
-                                        
-                                                    <div class="read-post-share-wrap mt-20 ">
-                                                        <div class="row align-items-left ">
-                                                            <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
-                                                                <div class="post-read-more ">
-                                                                    <div class="btn-text mt-15 ">
-                                                                        <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
-                                                                    </div>
-                                                                </div>
-                                        
-                                                                <div id="entry-post-share " class="entry-post-share ">
-                                                                    <div class="share-label ">
-                                                                        Share this
-                                                                    </div>
-                                                                    <div class="share-media ">
-                                                                        <span class="share-icon far fa-share-alt "></span>
-                                        
-                                                                        <div class="share-list ">
-                                                                            <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
-                                                                                <i class="fab fa-twitter "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
-                                                                                <i class="fab fa-facebook-f "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
-                                                                                <i class="fab fa-linkedin "></i>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Post info End -->
-                                            </div>
-                                            <!--===== Single Blog Item End =========-->
-                                        
-                                        </article>
-                                        <!-- 01 CIERRE PRESENTACION ARTICULO -->
-                                    </div>
-                                    <!-- Carousel Slider End -->
-                                </div>
-                                <div class="swiper-slide" data-swiper-slide-index="2" style="width: 450px; margin-right: 30px;">
-                                    <!-- Carousel Slider Start -->
-                                    <div class="carousel-slider wow move-up animated" style="visibility: visible;">
-                                        
-                                        
-                                        <!-- 01 INICIO PRESENTACION ARTICULO -->
-                                        <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
-                                            <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
-                                                <!-- Post Feature Start -->
-                                                <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
-                                                    <a href="#" class="video-link">
-                                                        <div class="single-popup-wrap">
-                                                            <img class="img-fluid" src="assets/images/blog/blog-02-1170x600.jpg" alt="">
-                                                            <div class="ht-popup-video video-overlay">
-                                                                <div class="video-button__one">
-                                                                    <div class="video-play">
-                                                                        <span class="video-play-icon"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                
-                                                </div>
-                                        
-                                                <!-- Post Feature End -->
-                                        
-                                                <!-- Post info Start -->
-                                                <div class="post-info lg-blog-post-info ">
-                                                    <div class="post-categories ">
-                                                        <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
-                                                    </div>
-                                        
-                                                    <h3 class="post-title ">
-                                                        <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
-                                                    </h3>
-                                        
-                                                    <div class="post-meta mt-20 ">
-                                                        <div class="post-author ">
-                                                            <a href="# ">
-                                                                                             Harry Ferguson
-                                                                                        </a>
-                                                        </div>
-                                                        <div class="post-date ">
-                                                            <span class="far fa-calendar meta-icon "></span> January 18, 2019
-                                                        </div>
-                                                        <div class="post-view ">
-                                                            <span class="meta-icon far fa-eye "></span> 346 views
-                                                        </div>
-                                                    </div>
-                                        
-                                                    <div class="post-excerpt mt-15 ">
-                                                        <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
-                                                    </div>
-                                        
-                                                    <div class="read-post-share-wrap mt-20 ">
-                                                        <div class="row align-items-left ">
-                                                            <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
-                                                                <div class="post-read-more ">
-                                                                    <div class="btn-text mt-15 ">
-                                                                        <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
-                                                                    </div>
-                                                                </div>
-                                        
-                                                                <div id="entry-post-share " class="entry-post-share ">
-                                                                    <div class="share-label ">
-                                                                        Share this
-                                                                    </div>
-                                                                    <div class="share-media ">
-                                                                        <span class="share-icon far fa-share-alt "></span>
-                                        
-                                                                        <div class="share-list ">
-                                                                            <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
-                                                                                <i class="fab fa-twitter "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
-                                                                                <i class="fab fa-facebook-f "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
-                                                                                <i class="fab fa-linkedin "></i>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Post info End -->
-                                            </div>
-                                            <!--===== Single Blog Item End =========-->
-                                        
-                                        </article>
-                                        <!-- 01 CIERRE PRESENTACION ARTICULO -->
-                                    </div>
-                                    <!-- Carousel Slider End -->
-                                </div>
-                                <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="3" style="width: 450px; margin-right: 30px;">
-                                    <!-- Carousel Slider Start -->
-                                    <div class="carousel-slider wow move-up animated" style="visibility: visible;">
-                                        
-                                        
-                                        <!-- 01 INICIO PRESENTACION ARTICULO -->
-                                        <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
-                                            <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
-                                                <!-- Post Feature Start -->
-                                                <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
-                                                    <a href="#" class="video-link">
-                                                        <div class="single-popup-wrap">
-                                                            <img class="img-fluid" src="assets/images/blog/blog-02-1170x600.jpg" alt="">
-                                                            <div class="ht-popup-video video-overlay">
-                                                                <div class="video-button__one">
-                                                                    <div class="video-play">
-                                                                        <span class="video-play-icon"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                
-                                                </div>
-                                        
-                                                <!-- Post Feature End -->
-                                        
-                                                <!-- Post info Start -->
-                                                <div class="post-info lg-blog-post-info ">
-                                                    <div class="post-categories ">
-                                                        <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
-                                                    </div>
-                                        
-                                                    <h3 class="post-title ">
-                                                        <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
-                                                    </h3>
-                                        
-                                                    <div class="post-meta mt-20 ">
-                                                        <div class="post-author ">
-                                                            <a href="# ">
-                                                                                             Harry Ferguson
-                                                                                        </a>
-                                                        </div>
-                                                        <div class="post-date ">
-                                                            <span class="far fa-calendar meta-icon "></span> January 18, 2019
-                                                        </div>
-                                                        <div class="post-view ">
-                                                            <span class="meta-icon far fa-eye "></span> 346 views
-                                                        </div>
-                                                    </div>
-                                        
-                                                    <div class="post-excerpt mt-15 ">
-                                                        <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
-                                                    </div>
-                                        
-                                                    <div class="read-post-share-wrap mt-20 ">
-                                                        <div class="row align-items-left ">
-                                                            <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
-                                                                <div class="post-read-more ">
-                                                                    <div class="btn-text mt-15 ">
-                                                                        <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
-                                                                    </div>
-                                                                </div>
-                                        
-                                                                <div id="entry-post-share " class="entry-post-share ">
-                                                                    <div class="share-label ">
-                                                                        Share this
-                                                                    </div>
-                                                                    <div class="share-media ">
-                                                                        <span class="share-icon far fa-share-alt "></span>
-                                        
-                                                                        <div class="share-list ">
-                                                                            <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
-                                                                                <i class="fab fa-twitter "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
-                                                                                <i class="fab fa-facebook-f "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
-                                                                                <i class="fab fa-linkedin "></i>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Post info End -->
-                                            </div>
-                                            <!--===== Single Blog Item End =========-->
-                                        
-                                        </article>
-                                        <!-- 01 CIERRE PRESENTACION ARTICULO -->
-                                    </div>
-                                    <!-- Carousel Slider End -->
-                                </div>
-                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 450px; margin-right: 30px;">
-                                    <!-- Carousel Slider Start -->
-                                    <div class="carousel-slider wow move-up animated" style="visibility: visible;">
-                                        
-                                        
-                                        <!-- 01 INICIO PRESENTACION ARTICULO -->
-                                        <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
-                                            <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
-                                                <!-- Post Feature Start -->
-                                                <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
-                                                    <a href="#" class="video-link">
-                                                        <div class="single-popup-wrap">
-                                                            <img class="img-fluid" src="assets/images/blog/blog-02-1170x600.jpg" alt="">
-                                                            <div class="ht-popup-video video-overlay">
-                                                                <div class="video-button__one">
-                                                                    <div class="video-play">
-                                                                        <span class="video-play-icon"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                
-                                                </div>
-                                        
-                                                <!-- Post Feature End -->
-                                        
-                                                <!-- Post info Start -->
-                                                <div class="post-info lg-blog-post-info ">
-                                                    <div class="post-categories ">
-                                                        <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
-                                                    </div>
-                                        
-                                                    <h3 class="post-title ">
-                                                        <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
-                                                    </h3>
-                                        
-                                                    <div class="post-meta mt-20 ">
-                                                        <div class="post-author ">
-                                                            <a href="# ">
-                                                                                             Harry Ferguson
-                                                                                        </a>
-                                                        </div>
-                                                        <div class="post-date ">
-                                                            <span class="far fa-calendar meta-icon "></span> January 18, 2019
-                                                        </div>
-                                                        <div class="post-view ">
-                                                            <span class="meta-icon far fa-eye "></span> 346 views
-                                                        </div>
-                                                    </div>
-                                        
-                                                    <div class="post-excerpt mt-15 ">
-                                                        <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
-                                                    </div>
-                                        
-                                                    <div class="read-post-share-wrap mt-20 ">
-                                                        <div class="row align-items-left ">
-                                                            <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
-                                                                <div class="post-read-more ">
-                                                                    <div class="btn-text mt-15 ">
-                                                                        <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
-                                                                    </div>
-                                                                </div>
-                                        
-                                                                <div id="entry-post-share " class="entry-post-share ">
-                                                                    <div class="share-label ">
-                                                                        Share this
-                                                                    </div>
-                                                                    <div class="share-media ">
-                                                                        <span class="share-icon far fa-share-alt "></span>
-                                        
-                                                                        <div class="share-list ">
-                                                                            <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
-                                                                                <i class="fab fa-twitter "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
-                                                                                <i class="fab fa-facebook-f "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
-                                                                                <i class="fab fa-linkedin "></i>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Post info End -->
-                                            </div>
-                                            <!--===== Single Blog Item End =========-->
-                                        
-                                        </article>
-                                        <!-- 01 CIERRE PRESENTACION ARTICULO -->
-                                    </div>
-                                    <!-- Carousel Slider End -->
-                                </div>
-                                <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 450px; margin-right: 30px;">
-                                    <!-- Carousel Slider Start -->
-                                    <div class="carousel-slider wow move-up animated" style="visibility: visible;">
-                                        
-                                        
-                                        <!-- 01 INICIO PRESENTACION ARTICULO -->
-                                        <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
-                                            <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
-                                                <!-- Post Feature Start -->
-                                                <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
-                                                    <a href="#" class="video-link">
-                                                        <div class="single-popup-wrap">
-                                                            <img class="img-fluid" src="assets/images/blog/blog-02-1170x600.jpg" alt="">
-                                                            <div class="ht-popup-video video-overlay">
-                                                                <div class="video-button__one">
-                                                                    <div class="video-play">
-                                                                        <span class="video-play-icon"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                
-                                                </div>
-                                        
-                                                <!-- Post Feature End -->
-                                        
-                                                <!-- Post info Start -->
-                                                <div class="post-info lg-blog-post-info ">
-                                                    <div class="post-categories ">
-                                                        <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
-                                                    </div>
-                                        
-                                                    <h3 class="post-title ">
-                                                        <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
-                                                    </h3>
-                                        
-                                                    <div class="post-meta mt-20 ">
-                                                        <div class="post-author ">
-                                                            <a href="# ">
-                                                                                             Harry Ferguson
-                                                                                        </a>
-                                                        </div>
-                                                        <div class="post-date ">
-                                                            <span class="far fa-calendar meta-icon "></span> January 18, 2019
-                                                        </div>
-                                                        <div class="post-view ">
-                                                            <span class="meta-icon far fa-eye "></span> 346 views
-                                                        </div>
-                                                    </div>
-                                        
-                                                    <div class="post-excerpt mt-15 ">
-                                                        <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
-                                                    </div>
-                                        
-                                                    <div class="read-post-share-wrap mt-20 ">
-                                                        <div class="row align-items-left ">
-                                                            <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
-                                                                <div class="post-read-more ">
-                                                                    <div class="btn-text mt-15 ">
-                                                                        <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
-                                                                    </div>
-                                                                </div>
-                                        
-                                                                <div id="entry-post-share " class="entry-post-share ">
-                                                                    <div class="share-label ">
-                                                                        Share this
-                                                                    </div>
-                                                                    <div class="share-media ">
-                                                                        <span class="share-icon far fa-share-alt "></span>
-                                        
-                                                                        <div class="share-list ">
-                                                                            <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
-                                                                                <i class="fab fa-twitter "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
-                                                                                <i class="fab fa-facebook-f "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
-                                                                                <i class="fab fa-linkedin "></i>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Post info End -->
-                                            </div>
-                                            <!--===== Single Blog Item End =========-->
-                                        
-                                        </article>
-                                        <!-- 01 CIERRE PRESENTACION ARTICULO -->
-                                    </div>
-                                    <!-- Carousel Slider End -->
-                                </div>
-                                <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 450px; margin-right: 30px;">
-                                    <!-- Carousel Slider Start -->
-                                    <div class="carousel-slider wow move-up animated" style="visibility: visible;">
-
-                                        
-                                        
-                                        <!-- 01 INICIO PRESENTACION ARTICULO -->
-                                        <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
-                                            <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
-                                                <!-- Post Feature Start -->
-                                                <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
-                                                    <a href="#" class="video-link">
-                                                        <div class="single-popup-wrap">
-                                                            <img class="img-fluid" src="assets/images/blog/blog-02-1170x600.jpg" alt="">
-                                                            <div class="ht-popup-video video-overlay">
-                                                                <div class="video-button__one">
-                                                                    <div class="video-play">
-                                                                        <span class="video-play-icon"></span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                
-                                                </div>
-                                        
-                                                <!-- Post Feature End -->
-                                        
-                                                <!-- Post info Start -->
-                                                <div class="post-info lg-blog-post-info ">
-                                                    <div class="post-categories ">
-                                                        <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
-                                                    </div>
-                                        
-                                                    <h3 class="post-title ">
-                                                        <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
-                                                    </h3>
-                                        
-                                                    <div class="post-meta mt-20 ">
-                                                        <div class="post-author ">
-                                                            <a href="# ">
-                                                                                             Harry Ferguson
-                                                                                        </a>
-                                                        </div>
-                                                        <div class="post-date ">
-                                                            <span class="far fa-calendar meta-icon "></span> January 18, 2019
-                                                        </div>
-                                                        <div class="post-view ">
-                                                            <span class="meta-icon far fa-eye "></span> 346 views
-                                                        </div>
-                                                    </div>
-                                        
-                                                    <div class="post-excerpt mt-15 ">
-                                                        <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
-                                                    </div>
-                                        
-                                                    <div class="read-post-share-wrap mt-20 ">
-                                                        <div class="row align-items-left ">
-                                                            <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
-                                                                <div class="post-read-more ">
-                                                                    <div class="btn-text mt-15 ">
-                                                                        <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
-                                                                    </div>
-                                                                </div>
-                                        
-                                                                <div id="entry-post-share " class="entry-post-share ">
-                                                                    <div class="share-label ">
-                                                                        Share this
-                                                                    </div>
-                                                                    <div class="share-media ">
-                                                                        <span class="share-icon far fa-share-alt "></span>
-                                        
-                                                                        <div class="share-list ">
-                                                                            <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
-                                                                                <i class="fab fa-twitter "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
-                                                                                <i class="fab fa-facebook-f "></i>
-                                                                            </a>
-                                                                            <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
-                                                                                <i class="fab fa-linkedin "></i>
-                                                                            </a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- Post info End -->
-                                            </div>
-                                            <!--===== Single Blog Item End =========-->
-                                        
-                                        </article>
-                                        <!-- 01 CIERRE PRESENTACION ARTICULO -->
-
-                                    </div>
-                                    <!-- Carousel Slider End -->
-                                </div>
-                            </div>
-                            <div class="swiper-pagination swiper-pagination-9 section-space--mt_50 swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span>
-                                <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>
-                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<!--====================  Video Area End ====================-->
-
-
-
-<div class="processing-hero processing-hero-bg">
-            <div class="container section-space--ptb_0">
-                <div class="row align-items-center">
-                    <!--baseline-->
-                    <div class="col-lg-6 col-md-6">
-                        <div class="processing-hero-text wow move-up animated" style="visibility: visible;">
-                            <h6>profitez du meilleur du foot</h6>
-                            <h3 class="font-weight--reguler mb-15 text-white">Désormais profitez du meilleur du foot et du meilleur des <span class="text-color-secondary">créations Netflix</span></h3>
-                            <p>Un seul abonnement qui donne accès aux deux plateformes.</p>
-                            <div class="hero-button mt-30">
-                                <a href="https://sabonner.telefootlachaine.fr/" target="_blank" class="btn btn--secondary">S'ABONNER</a>
-                                <div class="hero-popup-video video-popup">
-                                    <a href="https://www.youtube.com/watch?v=vqZuSUtczbU" class="video-link">
-                                        <div class="video-content">
-                                            <div class="video-play">
-                                                <span class="video-play-icon">
-                                            <i class="fa fa-play"></i>
-                                        </span>
-                                            </div>
-                                            <div class="video-text"> How we work</div>
-                                        </div>
-                                    </a>
-                                </div>
+                    <div class=" col-lg-7 ">
+                        <div class="section-title-wrap text-left ">
+                            <h3 class="section-title mb-15 wow move-up animated " style="visibility: visible; ">Watch the <span class="text-color-primary ">latest videos</span> from Ligue 1 Uber Eats, Ligue 2 BKT, Champions League and much more
+                            </h3>
+                            <div class="contact-button section-space--mt_30 wow move-up animated " style="visibility: visible; ">
+                                <a href="# " class="hover-style-link ">Watch all videos<i class="far fa-long-arrow-right "></i></a>
                             </div>
                         </div>
                     </div>
-                   
-                </div>
-            </div>
-        </div>
-
-
-
-        <!--====================  footer area ====================-->
-        <div class="footer-area-wrapper bg-gray-dark-1 ">
-            <div class="footer-area section-space--ptb_80 ">
-                <div class="container ">
-                    <div class="row footer-widget-wrapper ">
-                        <div class="col-lg-4 col-md-6 col-sm-6 footer-widget ">
-                            <div class="footer-widget__logo mb-30 ">
-                        
-                                <img class="footer-logo" src="assets/images/telefoot-logo-dark.svg" class="img-fluid " alt=" ">
-                            </div>
-                            <ul class="footer-widget__list ">
-                                <li>88 ter Avenue du Général Leclerc<br/>
-                                    92100 Boulogne-Billancourt</li>
-                                <li>Email: <a href="mailto:commercial@mediapro.fr" class="hover-style-link ">commercial@mediapro.fr</a></li>
-                                <li>APPELEZ NOUS AU TELEFOOT: <a href="tel: 0805 119 612" class="hover-style-link text-white "> 08 05 119 612</a></li>
-                                 <li>APPELEZ NOUS AU TELEFOOT BAR: <a href="tel: 0805 119 612" class="hover-style-link text-white ">08 05 119 619</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 footer-widget ">
-                            <h6 class="footer-widget__title mb-20 ">Sections</h6>
-                            <ul class="footer-widget__list ">
-                                <li><a href="# " class="hover-style-link ">Home</a></li>
-                                <li><a href="# " class="hover-style-link ">News</a></li>
-                                <li><a href="# " class="hover-style-link ">Vidéos</a></li>
-                                <li><a href="# " class="hover-style-link ">Telefoot TV</a></li>
-                                <li><a href="# " class="hover-style-link ">Calendries</a></li>
-                                <li><a href="# " class="hover-style-link ">Classements</a></li>
-                                <li><a href="# " class="hover-style-link ">Résultats</a></li>
-                                <li><a href="# " class="hover-style-link ">S'Abonner</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 footer-widget ">
-                            <h6 class="footer-widget__title mb-20 ">Quick links</h6>
-                            <ul class="footer-widget__list ">
-                                <li><a href="# " class="hover-style-link ">Conditions d'utilisation</a></li>
-                                <li><a href="# " class="hover-style-link ">Politique de confidentialité</a></li>
-                                <li><a href="# " class="hover-style-link ">Politique de cookies</a></li>
-                                <li><a href="# " class="hover-style-link ">Éthique et conformité</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 footer-widget ">
-                            <h6 class="footer-widget__title mb-20 ">Support</h6>
-                            <ul class="footer-widget__list ">
-                                <li><a href="# " class="hover-style-link ">Telefoot Support</a></li>
-                                <li><a href="# " class="hover-style-link ">Help & FAQ</a></li>
-                                <li><a href="# " class="hover-style-link ">Contact Us</a></li>
-                                <li><a href="# " class="hover-style-link ">Pricing and plans</a></li>
-                               
-                            </ul>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-sm-6 footer-widget ">
-                            <div class="footer-widget__title section-space--mb_50 "></div>
-                            <ul class="footer-widget__list ">
-                                <li>
-                                    <a href="# " class="image_btn "><img class="img-fluid " src="assets/images/icons/aeroland-button-google-play.jpg " alt=" "></a>
-                                </li>
-                                <li>
-                                    <a href="# " class="image_btn "><img class="img-fluid " src="assets/images/icons/aeroland-button-app-store.jpg " alt=" "></a>
-                                </li>
-                            </ul>
+                    <div class="col-lg-5 wow move-up animate " style="visibility: visible; animation-name: moveVertical; ">
+                        <div class="about-button mt-30 ">
+                            <a href="# " class="ht-btn ht-btn-md ">Se Connecter</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-copyright-area section-space--pb_30 ">
-                <div class="container ">
-                    <div class="row align-items-center ">
-                        <div class="col-md-6 text-center text-md-left ">
-                            <span class="copyright-text ">&copy; 2020 TELEFOOT - La chaine du foot. <a href="https://telefootlachaine.fr/ ">All Rights Reserved.</a></span>
-                        </div>
-                        <div class="col-md-6 text-center text-md-right ">
-                            <ul class="list ht-social-networks solid-rounded-icon ">
+            <div class="carousel-sliders-wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="swiper-container carousel-slider__container swiper-container-initialized swiper-container-horizontal mb-80">
+                                <div class="swiper-wrapper" style="transform: translate3d(-1440px, 0px, 0px); transition-duration: 0ms;">
+                                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 450px; margin-right: 30px;">
+                                        <!-- Carousel Slider Start -->
+                                        <div class="carousel-slider wow move-up animated" style="visibility: visible;">
 
-                                <li class="item ">
-                                    <a href="https://twitter.com " target="_blank " aria-label="Twitter " class="social-link hint--bounce hint--top hint--primary ">
-                                        <i class="fab fa-twitter link-icon "></i>
-                                    </a>
-                                </li>
-                                <li class="item ">
-                                    <a href="https://facebook.com " target="_blank " aria-label="Facebook " class="social-link hint--bounce hint--top hint--primary ">
-                                        <i class="fab fa-facebook-f link-icon "></i>
-                                    </a>
-                                </li>
-                                <li class="item ">
-                                    <a href="https://instagram.com " target="_blank " aria-label="Instagram " class="social-link hint--bounce hint--top hint--primary ">
-                                        <i class="fab fa-instagram link-icon "></i>
-                                    </a>
-                                </li>
-                            </ul>
+
+                                        </div>
+                                        <!-- Carousel Slider End -->
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 450px; margin-right: 30px;">
+                                        <!-- Carousel Slider Start -->
+                                        <div class="carousel-slider wow move-up animated" style="visibility: visible;">
+                                            
+                                            
+                                            <!-- 01 INICIO PRESENTACION ARTICULO -->
+                                            <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
+                                                <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
+                                                    <!-- Post Feature Start -->
+                                                    <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
+                                                        <a href="#" class="video-link">
+                                                            <div class="single-popup-wrap">
+                                                                <img class="img-fluid" src="assets/images/news/news_08.jpg" alt="">
+                                                                <div class="ht-popup-video video-overlay">
+                                                                    <div class="video-button__one">
+                                                                        <div class="video-play">
+                                                                            <span class="video-play-icon"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    
+                                                    </div>
+                                            
+                                                    <!-- Post Feature End -->
+                                            
+                                                    <!-- Post info Start -->
+                                                    <div class="post-info lg-blog-post-info ">
+                                                        <div class="post-categories ">
+                                                            <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
+                                                        </div>
+                                            
+                                                        <h3 class="post-title ">
+                                                            <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
+                                                        </h3>
+                                            
+                                                        <div class="post-meta mt-20 ">
+                                                            <div class="post-author ">
+                                                                <a href="# ">
+                                                                                                 Harry Ferguson
+                                                                                            </a>
+                                                            </div>
+                                                            <div class="post-date ">
+                                                                <span class="far fa-calendar meta-icon "></span> January 18, 2019
+                                                            </div>
+                                                            <div class="post-view ">
+                                                                <span class="meta-icon far fa-eye "></span> 346 views
+                                                            </div>
+                                                        </div>
+                                            
+                                                        <div class="post-excerpt mt-15 ">
+                                                            <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
+                                                        </div>
+                                            
+                                                        <div class="read-post-share-wrap mt-20 ">
+                                                            <div class="row align-items-left ">
+                                                                <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
+                                                                    <div class="post-read-more ">
+                                                                        <div class="btn-text mt-15 ">
+                                                                            <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
+                                                                        </div>
+                                                                    </div>
+                                            
+                                                                    <div id="entry-post-share " class="entry-post-share ">
+                                                                        <div class="share-label ">
+                                                                            Share this
+                                                                        </div>
+                                                                        <div class="share-media ">
+                                                                            <span class="share-icon far fa-share-alt "></span>
+                                            
+                                                                            <div class="share-list ">
+                                                                                <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
+                                                                                    <i class="fab fa-twitter "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
+                                                                                    <i class="fab fa-facebook-f "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
+                                                                                    <i class="fab fa-linkedin "></i>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Post info End -->
+                                                </div>
+                                                <!--===== Single Blog Item End =========-->
+                                            
+                                            </article>
+                                            <!-- 01 CIERRE PRESENTACION ARTICULO -->
+                                        </div>
+                                        <!-- Carousel Slider End -->
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="3" style="width: 450px; margin-right: 30px;">
+                                        <!-- Carousel Slider Start -->
+                                        <div class="carousel-slider wow move-up animated" style="visibility: visible;">
+                                            <div class="carousel-slider__image">
+                                                <img class="img-fluid" src="assets/images/blog/blog-02-500x338.jpg" alt="gallery 06">
+                                            </div>
+                                            <div class="carousel-slider__content">
+                                                <h6 class="headeing">04. Execute &amp; install</h6>
+                                                <div class="text">
+                                                    It's easy to switch between different devices while keeping your data safe with secure login.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Carousel Slider End -->
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 450px; margin-right: 30px;">
+                                        <!-- Carousel Slider Start -->
+                                        <div class="carousel-slider wow move-up animated" style="visibility: visible;">
+                                            
+                                            
+                                            <!-- 01 INICIO PRESENTACION ARTICULO -->
+                                            <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
+                                                <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
+                                                    <!-- Post Feature Start -->
+                                                    <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
+                                                        <a href="#" class="video-link">
+                                                            <div class="single-popup-wrap">
+                                                                <img class="img-fluid" src="assets/images/news/news_08.jpg" alt="">
+                                                                <div class="ht-popup-video video-overlay">
+                                                                    <div class="video-button__one">
+                                                                        <div class="video-play">
+                                                                            <span class="video-play-icon"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    
+                                                    </div>
+                                            
+                                                    <!-- Post Feature End -->
+                                            
+                                                    <!-- Post info Start -->
+                                                    <div class="post-info lg-blog-post-info ">
+                                                        <div class="post-categories ">
+                                                            <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
+                                                        </div>
+                                            
+                                                        <h3 class="post-title ">
+                                                            <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
+                                                        </h3>
+                                            
+                                                        <div class="post-meta mt-20 ">
+                                                            <div class="post-author ">
+                                                                <a href="# ">
+                                                                                                 Harry Ferguson
+                                                                                            </a>
+                                                            </div>
+                                                            <div class="post-date ">
+                                                                <span class="far fa-calendar meta-icon "></span> January 18, 2019
+                                                            </div>
+                                                            <div class="post-view ">
+                                                                <span class="meta-icon far fa-eye "></span> 346 views
+                                                            </div>
+                                                        </div>
+                                            
+                                                        <div class="post-excerpt mt-15 ">
+                                                            <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
+                                                        </div>
+                                            
+                                                        <div class="read-post-share-wrap mt-20 ">
+                                                            <div class="row align-items-left ">
+                                                                <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
+                                                                    <div class="post-read-more ">
+                                                                        <div class="btn-text mt-15 ">
+                                                                            <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
+                                                                        </div>
+                                                                    </div>
+                                            
+                                                                    <div id="entry-post-share " class="entry-post-share ">
+                                                                        <div class="share-label ">
+                                                                            Share this
+                                                                        </div>
+                                                                        <div class="share-media ">
+                                                                            <span class="share-icon far fa-share-alt "></span>
+                                            
+                                                                            <div class="share-list ">
+                                                                                <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
+                                                                                    <i class="fab fa-twitter "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
+                                                                                    <i class="fab fa-facebook-f "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
+                                                                                    <i class="fab fa-linkedin "></i>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Post info End -->
+                                                </div>
+                                                <!--===== Single Blog Item End =========-->
+                                            
+                                            </article>
+                                            <!-- 01 CIERRE PRESENTACION ARTICULO -->
+                                        </div>
+                                        <!-- Carousel Slider End -->
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 450px; margin-right: 30px;">
+                                        <!-- Carousel Slider Start -->
+                                        <div class="carousel-slider wow move-up animated" style="visibility: visible;">
+                                            
+                                            
+                                            <!-- 01 INICIO PRESENTACION ARTICULO -->
+                                            <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
+                                                <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
+                                                    <!-- Post Feature Start -->
+                                                    <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
+                                                        <a href="#" class="video-link">
+                                                            <div class="single-popup-wrap">
+                                                                <img class="img-fluid" src="assets/images/news/news_08.jpg" alt="">
+                                                                <div class="ht-popup-video video-overlay">
+                                                                    <div class="video-button__one">
+                                                                        <div class="video-play">
+                                                                            <span class="video-play-icon"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    
+                                                    </div>
+                                            
+                                                    <!-- Post Feature End -->
+                                            
+                                                    <!-- Post info Start -->
+                                                    <div class="post-info lg-blog-post-info ">
+                                                        <div class="post-categories ">
+                                                            <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
+                                                        </div>
+                                            
+                                                        <h3 class="post-title ">
+                                                            <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
+                                                        </h3>
+                                            
+                                                        <div class="post-meta mt-20 ">
+                                                            <div class="post-author ">
+                                                                <a href="# ">
+                                                                                                 Harry Ferguson
+                                                                                            </a>
+                                                            </div>
+                                                            <div class="post-date ">
+                                                                <span class="far fa-calendar meta-icon "></span> January 18, 2019
+                                                            </div>
+                                                            <div class="post-view ">
+                                                                <span class="meta-icon far fa-eye "></span> 346 views
+                                                            </div>
+                                                        </div>
+                                            
+                                                        <div class="post-excerpt mt-15 ">
+                                                            <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
+                                                        </div>
+                                            
+                                                        <div class="read-post-share-wrap mt-20 ">
+                                                            <div class="row align-items-left ">
+                                                                <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
+                                                                    <div class="post-read-more ">
+                                                                        <div class="btn-text mt-15 ">
+                                                                            <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
+                                                                        </div>
+                                                                    </div>
+                                            
+                                                                    <div id="entry-post-share " class="entry-post-share ">
+                                                                        <div class="share-label ">
+                                                                            Share this
+                                                                        </div>
+                                                                        <div class="share-media ">
+                                                                            <span class="share-icon far fa-share-alt "></span>
+                                            
+                                                                            <div class="share-list ">
+                                                                                <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
+                                                                                    <i class="fab fa-twitter "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
+                                                                                    <i class="fab fa-facebook-f "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
+                                                                                    <i class="fab fa-linkedin "></i>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Post info End -->
+                                                </div>
+                                                <!--===== Single Blog Item End =========-->
+                                            
+                                            </article>
+                                            <!-- 01 CIERRE PRESENTACION ARTICULO -->
+                                        </div>
+                                        <!-- Carousel Slider End -->
+                                    </div>
+                                    <div class="swiper-slide" data-swiper-slide-index="2" style="width: 450px; margin-right: 30px;">
+                                        <!-- Carousel Slider Start -->
+                                        <div class="carousel-slider wow move-up animated" style="visibility: visible;">
+                                            
+                                            
+                                            <!-- 01 INICIO PRESENTACION ARTICULO -->
+                                            <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
+                                                <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
+                                                    <!-- Post Feature Start -->
+                                                    <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
+                                                        <a href="#" class="video-link">
+                                                            <div class="single-popup-wrap">
+                                                                <img class="img-fluid" src="assets/images/news/news_08.jpg" alt="">
+                                                                <div class="ht-popup-video video-overlay">
+                                                                    <div class="video-button__one">
+                                                                        <div class="video-play">
+                                                                            <span class="video-play-icon"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    
+                                                    </div>
+                                            
+                                                    <!-- Post Feature End -->
+                                            
+                                                    <!-- Post info Start -->
+                                                    <div class="post-info lg-blog-post-info ">
+                                                        <div class="post-categories ">
+                                                            <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
+                                                        </div>
+                                            
+                                                        <h3 class="post-title ">
+                                                            <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
+                                                        </h3>
+                                            
+                                                        <div class="post-meta mt-20 ">
+                                                            <div class="post-author ">
+                                                                <a href="# ">
+                                                                                                 Harry Ferguson
+                                                                                            </a>
+                                                            </div>
+                                                            <div class="post-date ">
+                                                                <span class="far fa-calendar meta-icon "></span> January 18, 2019
+                                                            </div>
+                                                            <div class="post-view ">
+                                                                <span class="meta-icon far fa-eye "></span> 346 views
+                                                            </div>
+                                                        </div>
+                                            
+                                                        <div class="post-excerpt mt-15 ">
+                                                            <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
+                                                        </div>
+                                            
+                                                        <div class="read-post-share-wrap mt-20 ">
+                                                            <div class="row align-items-left ">
+                                                                <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
+                                                                    <div class="post-read-more ">
+                                                                        <div class="btn-text mt-15 ">
+                                                                            <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
+                                                                        </div>
+                                                                    </div>
+                                            
+                                                                    <div id="entry-post-share " class="entry-post-share ">
+                                                                        <div class="share-label ">
+                                                                            Share this
+                                                                        </div>
+                                                                        <div class="share-media ">
+                                                                            <span class="share-icon far fa-share-alt "></span>
+                                            
+                                                                            <div class="share-list ">
+                                                                                <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
+                                                                                    <i class="fab fa-twitter "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
+                                                                                    <i class="fab fa-facebook-f "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
+                                                                                    <i class="fab fa-linkedin "></i>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Post info End -->
+                                                </div>
+                                                <!--===== Single Blog Item End =========-->
+                                            
+                                            </article>
+                                            <!-- 01 CIERRE PRESENTACION ARTICULO -->
+                                        </div>
+                                        <!-- Carousel Slider End -->
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="3" style="width: 450px; margin-right: 30px;">
+                                        <!-- Carousel Slider Start -->
+                                        <div class="carousel-slider wow move-up animated" style="visibility: visible;">
+                                            
+                                            
+                                            <!-- 01 INICIO PRESENTACION ARTICULO -->
+                                            <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
+                                                <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
+                                                    <!-- Post Feature Start -->
+                                                    <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
+                                                        <a href="#" class="video-link">
+                                                            <div class="single-popup-wrap">
+                                                                <img class="img-fluid" src="assets/images/news/news_08.jpg" alt="">
+                                                                <div class="ht-popup-video video-overlay">
+                                                                    <div class="video-button__one">
+                                                                        <div class="video-play">
+                                                                            <span class="video-play-icon"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    
+                                                    </div>
+                                            
+                                                    <!-- Post Feature End -->
+                                            
+                                                    <!-- Post info Start -->
+                                                    <div class="post-info lg-blog-post-info ">
+                                                        <div class="post-categories ">
+                                                            <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
+                                                        </div>
+                                            
+                                                        <h3 class="post-title ">
+                                                            <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
+                                                        </h3>
+                                            
+                                                        <div class="post-meta mt-20 ">
+                                                            <div class="post-author ">
+                                                                <a href="# ">
+                                                                                                 Harry Ferguson
+                                                                                            </a>
+                                                            </div>
+                                                            <div class="post-date ">
+                                                                <span class="far fa-calendar meta-icon "></span> January 18, 2019
+                                                            </div>
+                                                            <div class="post-view ">
+                                                                <span class="meta-icon far fa-eye "></span> 346 views
+                                                            </div>
+                                                        </div>
+                                            
+                                                        <div class="post-excerpt mt-15 ">
+                                                            <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
+                                                        </div>
+                                            
+                                                        <div class="read-post-share-wrap mt-20 ">
+                                                            <div class="row align-items-left ">
+                                                                <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
+                                                                    <div class="post-read-more ">
+                                                                        <div class="btn-text mt-15 ">
+                                                                            <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
+                                                                        </div>
+                                                                    </div>
+                                            
+                                                                    <div id="entry-post-share " class="entry-post-share ">
+                                                                        <div class="share-label ">
+                                                                            Share this
+                                                                        </div>
+                                                                        <div class="share-media ">
+                                                                            <span class="share-icon far fa-share-alt "></span>
+                                            
+                                                                            <div class="share-list ">
+                                                                                <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
+                                                                                    <i class="fab fa-twitter "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
+                                                                                    <i class="fab fa-facebook-f "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
+                                                                                    <i class="fab fa-linkedin "></i>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Post info End -->
+                                                </div>
+                                                <!--===== Single Blog Item End =========-->
+                                            
+                                            </article>
+                                            <!-- 01 CIERRE PRESENTACION ARTICULO -->
+                                        </div>
+                                        <!-- Carousel Slider End -->
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 450px; margin-right: 30px;">
+                                        <!-- Carousel Slider Start -->
+                                        <div class="carousel-slider wow move-up animated" style="visibility: visible;">
+                                            
+                                            
+                                            <!-- 01 INICIO PRESENTACION ARTICULO -->
+                                            <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
+                                                <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
+                                                    <!-- Post Feature Start -->
+                                                    <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
+                                                        <a href="#" class="video-link">
+                                                            <div class="single-popup-wrap">
+                                                                <img class="img-fluid" src="assets/images/news/news_08.jpg" alt="">
+                                                                <div class="ht-popup-video video-overlay">
+                                                                    <div class="video-button__one">
+                                                                        <div class="video-play">
+                                                                            <span class="video-play-icon"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    
+                                                    </div>
+                                            
+                                                    <!-- Post Feature End -->
+                                            
+                                                    <!-- Post info Start -->
+                                                    <div class="post-info lg-blog-post-info ">
+                                                        <div class="post-categories ">
+                                                            <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
+                                                        </div>
+                                            
+                                                        <h3 class="post-title ">
+                                                            <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
+                                                        </h3>
+                                            
+                                                        <div class="post-meta mt-20 ">
+                                                            <div class="post-author ">
+                                                                <a href="# ">
+                                                                                                 Harry Ferguson
+                                                                                            </a>
+                                                            </div>
+                                                            <div class="post-date ">
+                                                                <span class="far fa-calendar meta-icon "></span> January 18, 2019
+                                                            </div>
+                                                            <div class="post-view ">
+                                                                <span class="meta-icon far fa-eye "></span> 346 views
+                                                            </div>
+                                                        </div>
+                                            
+                                                        <div class="post-excerpt mt-15 ">
+                                                            <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
+                                                        </div>
+                                            
+                                                        <div class="read-post-share-wrap mt-20 ">
+                                                            <div class="row align-items-left ">
+                                                                <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
+                                                                    <div class="post-read-more ">
+                                                                        <div class="btn-text mt-15 ">
+                                                                            <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
+                                                                        </div>
+                                                                    </div>
+                                            
+                                                                    <div id="entry-post-share " class="entry-post-share ">
+                                                                        <div class="share-label ">
+                                                                            Share this
+                                                                        </div>
+                                                                        <div class="share-media ">
+                                                                            <span class="share-icon far fa-share-alt "></span>
+                                            
+                                                                            <div class="share-list ">
+                                                                                <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
+                                                                                    <i class="fab fa-twitter "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
+                                                                                    <i class="fab fa-facebook-f "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
+                                                                                    <i class="fab fa-linkedin "></i>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Post info End -->
+                                                </div>
+                                                <!--===== Single Blog Item End =========-->
+                                            
+                                            </article>
+                                            <!-- 01 CIERRE PRESENTACION ARTICULO -->
+                                        </div>
+                                        <!-- Carousel Slider End -->
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 450px; margin-right: 30px;">
+                                        <!-- Carousel Slider Start -->
+                                        <div class="carousel-slider wow move-up animated" style="visibility: visible;">
+                                            
+                                            
+                                            <!-- 01 INICIO PRESENTACION ARTICULO -->
+                                            <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
+                                                <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
+                                                    <!-- Post Feature Start -->
+                                                    <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
+                                                        <a href="#" class="video-link">
+                                                            <div class="single-popup-wrap">
+                                                                <img class="img-fluid" src="assets/images/news/news_08.jpg" alt="">
+                                                                <div class="ht-popup-video video-overlay">
+                                                                    <div class="video-button__one">
+                                                                        <div class="video-play">
+                                                                            <span class="video-play-icon"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    
+                                                    </div>
+                                            
+                                                    <!-- Post Feature End -->
+                                            
+                                                    <!-- Post info Start -->
+                                                    <div class="post-info lg-blog-post-info ">
+                                                        <div class="post-categories ">
+                                                            <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
+                                                        </div>
+                                            
+                                                        <h3 class="post-title ">
+                                                            <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
+                                                        </h3>
+                                            
+                                                        <div class="post-meta mt-20 ">
+                                                            <div class="post-author ">
+                                                                <a href="# ">
+                                                                                                 Harry Ferguson
+                                                                                            </a>
+                                                            </div>
+                                                            <div class="post-date ">
+                                                                <span class="far fa-calendar meta-icon "></span> January 18, 2019
+                                                            </div>
+                                                            <div class="post-view ">
+                                                                <span class="meta-icon far fa-eye "></span> 346 views
+                                                            </div>
+                                                        </div>
+                                            
+                                                        <div class="post-excerpt mt-15 ">
+                                                            <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
+                                                        </div>
+                                            
+                                                        <div class="read-post-share-wrap mt-20 ">
+                                                            <div class="row align-items-left ">
+                                                                <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
+                                                                    <div class="post-read-more ">
+                                                                        <div class="btn-text mt-15 ">
+                                                                            <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
+                                                                        </div>
+                                                                    </div>
+                                            
+                                                                    <div id="entry-post-share " class="entry-post-share ">
+                                                                        <div class="share-label ">
+                                                                            Share this
+                                                                        </div>
+                                                                        <div class="share-media ">
+                                                                            <span class="share-icon far fa-share-alt "></span>
+                                            
+                                                                            <div class="share-list ">
+                                                                                <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
+                                                                                    <i class="fab fa-twitter "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
+                                                                                    <i class="fab fa-facebook-f "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
+                                                                                    <i class="fab fa-linkedin "></i>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Post info End -->
+                                                </div>
+                                                <!--===== Single Blog Item End =========-->
+                                            
+                                            </article>
+                                            <!-- 01 CIERRE PRESENTACION ARTICULO -->
+                                        </div>
+                                        <!-- Carousel Slider End -->
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 450px; margin-right: 30px;">
+                                        <!-- Carousel Slider Start -->
+                                        <div class="carousel-slider wow move-up animated" style="visibility: visible;">
+
+                                            
+                                            
+                                            <!-- 01 INICIO PRESENTACION ARTICULO -->
+                                            <article data-aos="fade-up" class="article-item-2 grid-item half-image-card post-presentation aos-init aos-animate">
+                                                <div class="single-blog-item xs-list-blog-item border-bottom wow move-up ">
+                                                    <!-- Post Feature Start -->
+                                                    <div class="video-popup text-center wow move-up animated" style="visibility: visible;">
+                                                        <a href="#" class="video-link">
+                                                            <div class="single-popup-wrap">
+                                                                <img class="img-fluid" src="assets/images/news/news_08.jpg" alt="">
+                                                                <div class="ht-popup-video video-overlay">
+                                                                    <div class="video-button__one">
+                                                                        <div class="video-play">
+                                                                            <span class="video-play-icon"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    
+                                                    </div>
+                                            
+                                                    <!-- Post Feature End -->
+                                            
+                                                    <!-- Post info Start -->
+                                                    <div class="post-info lg-blog-post-info ">
+                                                        <div class="post-categories ">
+                                                            <a href="# "> LIgue 1 Uber Eats, Ligue 2BKT</a>
+                                                        </div>
+                                            
+                                                        <h3 class="post-title ">
+                                                            <a href="# ">Lorem ipsum dolor sit ametcons ctetur, adipiscing elit pharetra</a>
+                                                        </h3>
+                                            
+                                                        <div class="post-meta mt-20 ">
+                                                            <div class="post-author ">
+                                                                <a href="# ">
+                                                                                                 Harry Ferguson
+                                                                                            </a>
+                                                            </div>
+                                                            <div class="post-date ">
+                                                                <span class="far fa-calendar meta-icon "></span> January 18, 2019
+                                                            </div>
+                                                            <div class="post-view ">
+                                                                <span class="meta-icon far fa-eye "></span> 346 views
+                                                            </div>
+                                                        </div>
+                                            
+                                                        <div class="post-excerpt mt-15 ">
+                                                            <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit et parturient cum tortor, habitant eget eu pharetra …</p>
+                                                        </div>
+                                            
+                                                        <div class="read-post-share-wrap mt-20 ">
+                                                            <div class="row align-items-left ">
+                                                                <div class="col-lg-12 col-md-12 col-sm-12 post-read-more-share ">
+                                                                    <div class="post-read-more ">
+                                                                        <div class="btn-text mt-15 ">
+                                                                            <a href="# ">Read more <i class="ml-1 button-icon far fa-long-arrow-right "></i></a>
+                                                                        </div>
+                                                                    </div>
+                                            
+                                                                    <div id="entry-post-share " class="entry-post-share ">
+                                                                        <div class="share-label ">
+                                                                            Share this
+                                                                        </div>
+                                                                        <div class="share-media ">
+                                                                            <span class="share-icon far fa-share-alt "></span>
+                                            
+                                                                            <div class="share-list ">
+                                                                                <a class="hint--bounce hint--top hint--primary twitter " target="_blank " aria-label="Twitter " href="# ">
+                                                                                    <i class="fab fa-twitter "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary facebook " target="_blank " aria-label="Facebook " href="# ">
+                                                                                    <i class="fab fa-facebook-f "></i>
+                                                                                </a>
+                                                                                <a class="hint--bounce hint--top hint--primary linkedin " target="_blank " aria-label="Linkedin " href="# ">
+                                                                                    <i class="fab fa-linkedin "></i>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Post info End -->
+                                                </div>
+                                                <!--===== Single Blog Item End =========-->
+                                            
+                                            </article>
+                                            <!-- 01 CIERRE PRESENTACION ARTICULO -->
+
+                                        </div>
+                                        <!-- Carousel Slider End -->
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination-9 section-space--mt_50 swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span>
+                                    <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>
+                                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--====================  End of footer area  ====================-->
-  
 
-    <!--====================  scroll top ====================-->
-    <a href="# " class="scroll-top " id="scroll-top ">
-        <i class="arrow-top fal fa-long-arrow-up "></i>
-        <i class="arrow-bottom fal fa-long-arrow-up "></i>
-    </a>
-    <!--====================  End of scroll top  ====================-->
+    <!--====================  Video Area End ====================-->
 
 
 
- 
-    <!-- JS
-    ============================================ -->
-    <!-- Modernizer JS -->
-    <script src="assets/js/vendor/modernizr-2.8.3.min.js "></script>
-
-    <!-- jQuery JS -->
-    <script src="assets/js/vendor/jquery-3.3.1.min.js "></script>
-
-    <!-- Bootstrap JS -->
-    <script src="assets/js/vendor/bootstrap.min.js "></script>
-
-    <!-- Swiper Slider JS -->
-    <script src="assets/js/plugins/swiper.min.js "></script>
-
-    <!-- Light gallery JS -->
-    <script src="assets/js/plugins/lightgallery.min.js "></script>
-
-    <!-- Waypoints JS -->
-    <script src="assets/js/plugins/waypoints.min.js "></script>
-
-    <!-- Counter down JS -->
-    <script src="assets/js/plugins/countdown.min.js "></script>
-
-    <!-- Isotope JS -->
-    <script src="assets/js/plugins/isotope.min.js "></script>
-
-    <!-- Masonry JS -->
-    <script src="assets/js/plugins/masonry.min.js "></script>
-
-    <!-- ImagesLoaded JS -->
-    <script src="assets/js/plugins/images-loaded.min.js "></script>
-
-    <!-- Wavify JS -->
-    <script src="assets/js/plugins/wavify.js "></script>
-
-    <!-- jQuery Wavify JS -->
-    <script src="assets/js/plugins/jquery.wavify.js "></script>
-
-    <!-- circle progress JS -->
-    <script src="assets/js/plugins/circle-progress.min.js "></script>
-
-    <!-- counterup JS -->
-    <script src="assets/js/plugins/counterup.min.js "></script>
-
-    <!-- wow JS -->
-    <script src="assets/js/plugins/wow.min.js "></script>
-
-    <!-- animation text JS -->
-    <script src="assets/js/plugins/animation-text.min.js "></script>
-
-    <!-- Vivus JS -->
-    <script src="assets/js/plugins/vivus.min.js "></script>
-
-    <!-- Some plugins JS -->
-    <script src="assets/js/plugins/some-plugins.js "></script>
+    <div class="processing-hero processing-hero-bg">
+                <div class="container section-space--ptb_0">
+                    <div class="row align-items-center">
+                        <!--baseline-->
+                        <div class="col-lg-6 col-md-6">
+                            <div class="processing-hero-text wow move-up animated" style="visibility: visible;">
+                                <h6>profitez du meilleur du foot</h6>
+                                <h3 class="font-weight--reguler mb-15 text-white">Désormais profitez du meilleur du foot et du meilleur des <span class="text-color-secondary">créations Netflix</span></h3>
+                                <p>Un seul abonnement qui donne accès aux deux plateformes.</p>
+                                <div class="hero-button mt-30">
+                                    <a href="https://sabonner.telefootlachaine.fr/" target="_blank" class="btn btn--secondary">S'ABONNER</a>
+                                    <div class="hero-popup-video video-popup">
+                                        <a href="https://www.youtube.com/watch?v=vqZuSUtczbU" class="video-link">
+                                            <div class="video-content">
+                                                <div class="video-play">
+                                                    <span class="video-play-icon">
+                                                <i class="fa fa-play"></i>
+                                            </span>
+                                                </div>
+                                                <div class="video-text"> How we work</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
 
 
-    <!-- Plugins JS (Please remove the comment from below plugins.min.js for better website load performance and remove plugin js files from avobe) -->
-
-    <!--
-    <script src="assets/js/plugins/plugins.min.js "></script>
-    -->
-
-    <!-- Main JS -->
-
-
-
-    <script src="assets/js/main.js "></script>
-
-    <script src="assets/js/main.min-v=501cce473e.js "></script>
-</body>
-
-</html>
+    
+            <!--====================  footer area ====================-->
+            <div class="footer-area-wrapper bg-gray-dark-1 ">
+                <div class="footer-area section-space--ptb_80 ">
+                    <div class="container ">
+                        <div class="row footer-widget-wrapper ">
+                            <div class="col-lg-4 col-md-6 col-sm-6 footer-widget ">
+                                <div class="footer-widget__logo mb-30 ">
+                            
+                                    <img class="footer-logo" src="assets/images/telefoot-logo-dark.svg" class="img-fluid " alt=" ">
+                                </div>
+                                <ul class="footer-widget__list ">
+                                    <li>88 ter Avenue du Général Leclerc<br/>
+                                        92100 Boulogne-Billancourt</li>
+                                    <li>Email: <a href="mailto:commercial@mediapro.fr" class="hover-style-link ">commercial@mediapro.fr</a></li>
+                                    <li>APPELEZ NOUS AU TELEFOOT: <a href="tel: 0805 119 612" class="hover-style-link text-white "> 08 05 119 612</a></li>
+                                     <li>APPELEZ NOUS AU TELEFOOT BAR: <a href="tel: 0805 119 612" class="hover-style-link text-white ">08 05 119 619</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-6 footer-widget ">
+                                <h6 class="footer-widget__title mb-20 ">Sections</h6>
+                                <ul class="footer-widget__list ">
+                                    <li><a href="# " class="hover-style-link ">Home</a></li>
+                                    <li><a href="# " class="hover-style-link ">News</a></li>
+                                    <li><a href="# " class="hover-style-link ">Vidéos</a></li>
+                                    <li><a href="# " class="hover-style-link ">Telefoot TV</a></li>
+                                    <li><a href="# " class="hover-style-link ">Calendries</a></li>
+                                    <li><a href="# " class="hover-style-link ">Classements</a></li>
+                                    <li><a href="# " class="hover-style-link ">Résultats</a></li>
+                                    <li><a href="# " class="hover-style-link ">S'Abonner</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-6 footer-widget ">
+                                <h6 class="footer-widget__title mb-20 ">Quick links</h6>
+                                <ul class="footer-widget__list ">
+                                    <li><a href="# " class="hover-style-link ">Conditions d'utilisation</a></li>
+                                    <li><a href="# " class="hover-style-link ">Politique de confidentialité</a></li>
+                                    <li><a href="# " class="hover-style-link ">Politique de cookies</a></li>
+                                    <li><a href="# " class="hover-style-link ">Éthique et conformité</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-6 footer-widget ">
+                                <h6 class="footer-widget__title mb-20 ">Support</h6>
+                                <ul class="footer-widget__list ">
+                                    <li><a href="# " class="hover-style-link ">Telefoot Support</a></li>
+                                    <li><a href="# " class="hover-style-link ">Help & FAQ</a></li>
+                                    <li><a href="# " class="hover-style-link ">Contact Us</a></li>
+                                    <li><a href="# " class="hover-style-link ">Pricing and plans</a></li>
+                                   
+                                </ul>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-sm-6 footer-widget ">
+                                <div class="footer-widget__title section-space--mb_50 "></div>
+                                <ul class="footer-widget__list ">
+                                    <li>
+                                        <a href="# " class="image_btn "><img class="img-fluid " src="assets/images/icons/aeroland-button-google-play.jpg " alt=" "></a>
+                                    </li>
+                                    <li>
+                                        <a href="# " class="image_btn "><img class="img-fluid " src="assets/images/icons/aeroland-button-app-store.jpg " alt=" "></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright-area section-space--pb_30 ">
+                    <div class="container ">
+                        <div class="row align-items-center ">
+                            <div class="col-md-6 text-center text-md-left ">
+                                <span class="copyright-text ">&copy; 2020 TELEFOOT - La chaine du foot. <a href="https://telefootlachaine.fr/ ">All Rights Reserved.</a></span>
+                            </div>
+                            <div class="col-md-6 text-center text-md-right ">
+                                <ul class="list ht-social-networks solid-rounded-icon ">
+    
+                                    <li class="item ">
+                                        <a href="https://twitter.com " target="_blank " aria-label="Twitter " class="social-link hint--bounce hint--top hint--primary ">
+                                            <i class="fab fa-twitter link-icon "></i>
+                                        </a>
+                                    </li>
+                                    <li class="item ">
+                                        <a href="https://facebook.com " target="_blank " aria-label="Facebook " class="social-link hint--bounce hint--top hint--primary ">
+                                            <i class="fab fa-facebook-f link-icon "></i>
+                                        </a>
+                                    </li>
+                                    <li class="item ">
+                                        <a href="https://instagram.com " target="_blank " aria-label="Instagram " class="social-link hint--bounce hint--top hint--primary ">
+                                            <i class="fab fa-instagram link-icon "></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+        <!--====================  End of footer area  ====================-->
+      
+    
+        <!--====================  scroll top ====================-->
+        <a href="# " class="scroll-top " id="scroll-top ">
+            <i class="arrow-top fal fa-long-arrow-up "></i>
+            <i class="arrow-bottom fal fa-long-arrow-up "></i>
+        </a>
+        <!--====================  End of scroll top  ====================-->
+    
+    
+    
+    
+            <!--====================  scroll top ====================-->
+            <a href="# " class="scroll-top " id="scroll-top ">
+                <i class="arrow-top fal fa-long-arrow-up "></i>
+                <i class="arrow-bottom fal fa-long-arrow-up "></i>
+            </a>
+            <!--====================  End of scroll top  ====================-->
+            
+            
+            
+            <!-- JS
+            ============================================ -->
+            <!-- Modernizer JS -->
+            <script src="assets/js/vendor/modernizr-2.8.3.min.js "></script>
+        
+            <!-- jQuery JS -->
+            <script src="assets/js/vendor/jquery-3.3.1.min.js "></script>
+        
+            <!-- Bootstrap JS -->
+            <script src="assets/js/vendor/bootstrap.min.js "></script>
+        
+            <!-- Swiper Slider JS -->
+            <script src="assets/js/plugins/swiper.min.js "></script>
+        
+            <!-- Light gallery JS -->
+            <script src="assets/js/plugins/lightgallery.min.js "></script>
+        
+            <!-- Waypoints JS -->
+            <script src="assets/js/plugins/waypoints.min.js "></script>
+        
+            <!-- Counter down JS -->
+            <script src="assets/js/plugins/countdown.min.js "></script>
+        
+            <!-- Isotope JS -->
+            <script src="assets/js/plugins/isotope.min.js "></script>
+        
+            <!-- Masonry JS -->
+            <script src="assets/js/plugins/masonry.min.js "></script>
+        
+            <!-- ImagesLoaded JS -->
+            <script src="assets/js/plugins/images-loaded.min.js "></script>
+        
+            <!-- Wavify JS -->
+            <script src="assets/js/plugins/wavify.js "></script>
+        
+            <!-- jQuery Wavify JS -->
+            <script src="assets/js/plugins/jquery.wavify.js "></script>
+        
+            <!-- circle progress JS -->
+            <script src="assets/js/plugins/circle-progress.min.js "></script>
+        
+            <!-- counterup JS -->
+            <script src="assets/js/plugins/counterup.min.js "></script>
+        
+            <!-- wow JS -->
+            <script src="assets/js/plugins/wow.min.js "></script>
+        
+            <!-- animation text JS -->
+            <script src="assets/js/plugins/animation-text.min.js "></script>
+        
+            <!-- Vivus JS -->
+            <script src="assets/js/plugins/vivus.min.js "></script>
+        
+            <!-- Some plugins JS -->
+            <script src="assets/js/plugins/some-plugins.js "></script>
+        
+        
+            <!-- Plugins JS (Please remove the comment from below plugins.min.js for better website load performance and remove plugin js files from avobe) -->
+        
+            <!--
+            <script src="assets/js/plugins/plugins.min.js "></script>
+            -->
+        
+            <!-- Main JS -->
+        
+        
+        
+            <script src="assets/js/main.js "></script>
+        
+            <script src="assets/js/main.min-v=501cce473e.js "></script>
+        
+        
+        
+        
+        </body>
+        
+        </html>

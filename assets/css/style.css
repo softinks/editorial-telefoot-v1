@@ -9884,11 +9884,12 @@ blockquote {
   .entry-post-share .share-media .share-icon {
     color: #fff;
     background: #d4a54e;
-    height: 35px;
+    height: 35x;
     width: 35px;
     line-height: 35px;
-    font-size: 13px;
+    font-size: 15px;
     border-radius: 50%;
+    padding: 6px 10px;
     text-align: center;
     cursor: pointer;
     color: #fff; }
